@@ -1,0 +1,84 @@
+Oct 12 00:07:32 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Oct 12 00:07:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 00:07:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 00:07:32 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Oct 12 00:07:32 symfony [info] {sfPHPView} Render "D:\xampp\AegisBorn\lib\vendor\symfony-1.4.8\lib/controller/default/templates/indexSuccess.php"
+Oct 12 00:07:32 symfony [info] {sfPHPView} Decorate content with "D:\xampp\AegisBorn\lib\vendor\symfony-1.4.8\lib\controller\default\templates/defaultLayout.php"
+Oct 12 00:07:32 symfony [info] {sfPHPView} Render "D:\xampp\AegisBorn\lib\vendor\symfony-1.4.8\lib\controller\default\templates/defaultLayout.php"
+Oct 12 00:07:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 00:07:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 00:07:32 symfony [info] {sfWebDebugLogger} Configuration 195.99 ms (9)
+Oct 12 00:07:32 symfony [info] {sfWebDebugLogger} Factories 135.58 ms (1)
+Oct 12 00:07:32 symfony [info] {sfWebDebugLogger} Action "default/index" 0.13 ms (1)
+Oct 12 00:07:32 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 37.53 ms (1)
+Oct 12 00:07:32 symfony [info] {sfWebResponse} Send content (30375 o)
+Oct 12 00:24:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 12 00:24:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 12 00:24:31 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Oct 12 00:24:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 00:24:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 12 00:24:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 00:24:31 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Oct 12 00:24:31 symfony [info] {sfPHPView} Render "D:\xampp\AegisBorn\lib\vendor\symfony-1.4.8\lib/controller/default/templates/indexSuccess.php"
+Oct 12 00:24:31 symfony [info] {sfPHPView} Decorate content with "D:\xampp\AegisBorn\lib\vendor\symfony-1.4.8\lib\controller\default\templates/defaultLayout.php"
+Oct 12 00:24:31 symfony [info] {sfPHPView} Render "D:\xampp\AegisBorn\lib\vendor\symfony-1.4.8\lib\controller\default\templates/defaultLayout.php"
+Oct 12 00:24:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 00:24:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 00:24:31 symfony [info] {sfWebDebugLogger} Configuration 12.33 ms (9)
+Oct 12 00:24:31 symfony [info] {sfWebDebugLogger} Factories 44.30 ms (1)
+Oct 12 00:24:31 symfony [info] {sfWebDebugLogger} Action "default/index" 0.12 ms (1)
+Oct 12 00:24:31 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 15.57 ms (1)
+Oct 12 00:24:31 symfony [info] {sfWebResponse} Send content (31887 o)
+Oct 12 00:24:39 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 12 00:24:39 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 12 00:24:39 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /logout with parameters array (  'module' => 'logout',  'action' => 'index',)
+Oct 12 00:24:39 symfony [info] {sfFrontWebController} Action "logout/index" does not exist
+Oct 12 00:24:39 symfony [err] {sfError404Exception} Action "logout/index" does not exist.
+Oct 12 00:24:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 12 00:24:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 00:24:39 symfony [info] {sfWebDebugLogger} Configuration 4.80 ms (5)
+Oct 12 00:24:39 symfony [info] {sfWebDebugLogger} Factories 46.54 ms (1)
+Oct 12 00:24:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 12 00:24:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 12 00:24:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /security/logout with parameters array (  'module' => 'security',  'action' => 'logout',)
+Oct 12 00:24:50 symfony [info] {sfFrontWebController} Action "security/logout" does not exist
+Oct 12 00:24:50 symfony [err] {sfError404Exception} Action "security/logout" does not exist.
+Oct 12 00:24:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 12 00:24:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 00:24:50 symfony [info] {sfWebDebugLogger} Configuration 4.72 ms (5)
+Oct 12 00:24:50 symfony [info] {sfWebDebugLogger} Factories 46.11 ms (1)
+Oct 12 00:25:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 12 00:25:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 12 00:25:31 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /sf_guard_signout with parameters array (  'module' => 'sf_guard_signout',  'action' => 'index',)
+Oct 12 00:25:31 symfony [info] {sfFrontWebController} Action "sf_guard_signout/index" does not exist
+Oct 12 00:25:31 symfony [err] {sfError404Exception} Action "sf_guard_signout/index" does not exist.
+Oct 12 00:25:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 12 00:25:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 00:25:31 symfony [info] {sfWebDebugLogger} Configuration 5.07 ms (5)
+Oct 12 00:25:31 symfony [info] {sfWebDebugLogger} Factories 48.15 ms (1)
+Oct 12 00:25:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 12 00:25:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 12 00:25:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /index/sf_guard_signout with parameters array (  'module' => 'index',  'action' => 'sf_guard_signout',)
+Oct 12 00:25:41 symfony [info] {sfFrontWebController} Action "index/sf_guard_signout" does not exist
+Oct 12 00:25:41 symfony [err] {sfError404Exception} Action "index/sf_guard_signout" does not exist.
+Oct 12 00:25:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 12 00:25:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 00:25:41 symfony [info] {sfWebDebugLogger} Configuration 5.08 ms (5)
+Oct 12 00:25:41 symfony [info] {sfWebDebugLogger} Factories 47.65 ms (1)
+Oct 12 00:27:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 12 00:27:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 12 00:27:34 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Oct 12 00:27:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 00:27:34 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 12 00:27:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 00:27:34 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Oct 12 00:27:35 symfony [info] {sfPHPView} Render "D:\xampp\AegisBorn\lib\vendor\symfony-1.4.8\lib/controller/default/templates/indexSuccess.php"
+Oct 12 00:27:35 symfony [info] {sfPHPView} Decorate content with "D:\xampp\AegisBorn\lib\vendor\symfony-1.4.8\lib\controller\default\templates/defaultLayout.php"
+Oct 12 00:27:35 symfony [info] {sfPHPView} Render "D:\xampp\AegisBorn\lib\vendor\symfony-1.4.8\lib\controller\default\templates/defaultLayout.php"
+Oct 12 00:27:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 00:27:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 00:27:35 symfony [info] {sfWebDebugLogger} Configuration 12.65 ms (9)
+Oct 12 00:27:35 symfony [info] {sfWebDebugLogger} Factories 1041.45 ms (1)
+Oct 12 00:27:35 symfony [info] {sfWebDebugLogger} Action "default/index" 0.12 ms (1)
+Oct 12 00:27:35 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 382.08 ms (1)
+Oct 12 00:27:35 symfony [info] {sfWebResponse} Send content (31961 o)

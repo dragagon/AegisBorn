@@ -1,0 +1,112 @@
+<zone>
+  <name>AegisBorn</name>
+  <isCustomLogin>false</isCustomLogin>
+  <applyWordsFilterToUserName>true</applyWordsFilterToUserName>
+  <applyWordsFilterToRoomName>true</applyWordsFilterToRoomName>
+  <applyWordsFilterToPrivateMessages>true</applyWordsFilterToPrivateMessages>
+  <isFilterBuddyMessages>true</isFilterBuddyMessages>
+  <maxUsers>50000</maxUsers>
+  <maxUserVariablesAllowed>5</maxUserVariablesAllowed>
+  <maxRoomVariablesAllowed>5</maxRoomVariablesAllowed>
+  <minRoomNameChars>3</minRoomNameChars>
+  <maxRoomNameChars>10</maxRoomNameChars>
+  <maxRooms>10000</maxRooms>
+  <maxRoomsCreatedPerUser>10</maxRoomsCreatedPerUser>
+  <userCountChangeUpdateInterval>1000</userCountChangeUpdateInterval>
+  <userReconnectionSeconds>0</userReconnectionSeconds>
+  <overrideMaxUserIdleTime>120</overrideMaxUserIdleTime>
+  <allowGuestUsers>true</allowGuestUsers>
+  <guestUserNamePrefix>Guest#</guestUserNamePrefix>
+  <publicRoomGroups>default</publicRoomGroups>
+  <defaultRoomGroups>default</defaultRoomGroups>
+  <defaultPlayerIdGeneratorClass></defaultPlayerIdGeneratorClass>
+  <wordsFilter active="false">
+    <useWarnings>false</useWarnings>
+    <warningsBeforeKick>3</warningsBeforeKick>
+    <kicksBeforeBan>2</kicksBeforeBan>
+    <banDuration>1440</banDuration>
+    <maxBadWordsPerMessage>0</maxBadWordsPerMessage>
+    <kicksBeforeBanMinutes>3</kicksBeforeBanMinutes>
+    <secondsBeforeBanOrKick>5</secondsBeforeBanOrKick>
+    <warningMessage>This is a warning, stop using swar words or you will be banned.</warningMessage>
+    <kickMessage>You are going to be kicked</kickMessage>
+    <banMessage>You are going to be banned</banMessage>
+    <wordsFile>config/wordsFile.txt</wordsFile>
+    <filterMode>WHITELIST</filterMode>
+    <banMode>NAME</banMode>
+    <hideBadWordWithCharacter>*</hideBadWordWithCharacter>
+  </wordsFilter>
+  <floodFilter active="false">
+    <banDurationMinutes>1440</banDurationMinutes>
+    <maxFloodingAttempts>5</maxFloodingAttempts>
+    <secondsBeforeBan>5</secondsBeforeBan>
+    <banMode>NAME</banMode>
+    <logFloodingAttempts>true</logFloodingAttempts>
+    <banMessage>Too much flooding, you are banned</banMessage>
+  </floodFilter>
+  <rooms>
+    <room>
+      <name>General</name>
+      <groupId>default</groupId>
+      <password></password>
+      <maxUsers>50000</maxUsers>
+      <maxSpectators>0</maxSpectators>
+      <isDynamic>false</isDynamic>
+      <isGame>false</isGame>
+      <isHidden>false</isHidden>
+      <autoRemoveMode>default</autoRemoveMode>
+      <permissions>
+        <flags>PASSWORD_STATE_CHANGE,PUBLIC_MESSAGES</flags>
+        <maxRoomVariablesAllowed>10</maxRoomVariablesAllowed>
+      </permissions>
+      <events>USER_ENTER_EVENT,USER_EXIT_EVENT,USER_COUNT_CHANGE_EVENT,USER_VARIABLES_UPDATE_EVENT</events>
+      <badWordsFilter isActive="false"/>
+      <roomVariables/>
+      <extension>
+        <name></name>
+        <type>JAVA</type>
+        <file></file>
+        <propertiesFile></propertiesFile>
+        <reloadMode>AUTO</reloadMode>
+      </extension>
+    </room>
+  </rooms>
+  <disabledSystemEvents/>
+  <privilegeManager active="false">
+    <profiles/>
+  </privilegeManager>
+  <extension>
+    <name>AegisBornExtension</name>
+    <type>JAVA</type>
+    <file>com.cjrgaming.aegisborn.AegisBornExtension</file>
+    <propertiesFile></propertiesFile>
+    <reloadMode>AUTO</reloadMode>
+  </extension>
+  <buddyList active="false">
+    <allowOfflineBuddyVariables>true</allowOfflineBuddyVariables>
+    <maxItemsPerList>100</maxItemsPerList>
+    <maxBuddyVariables>15</maxBuddyVariables>
+    <offlineBuddyVariablesCacheSize>500</offlineBuddyVariablesCacheSize>
+    <customStorageClass></customStorageClass>
+    <useTempBuddies>true</useTempBuddies>
+    <buddyStates class="java.util.Arrays$ArrayList">
+      <a class="string-array">
+        <string>Available</string>
+        <string>Away</string>
+        <string>Occupied</string>
+      </a>
+    </buddyStates>
+    <badWordsFilter isActive="false"/>
+  </buddyList>
+  <databaseManager active="true">
+    <driverName>org.gjt.mm.mysql.Driver</driverName>
+    <connectionString>jdbc:mysql://localhost/spherew1_ab</connectionString>
+    <userName>spherew1_ab</userName>
+    <password>user_ab1!</password>
+    <testSql>SELECT COUNT(*) cnt FROM sf_guard_user</testSql>
+    <maxActiveConnections>10</maxActiveConnections>
+    <maxIdleConnections>10</maxIdleConnections>
+    <exhaustedPoolAction>GROW</exhaustedPoolAction>
+    <blockTime>3000</blockTime>
+  </databaseManager>
+</zone>

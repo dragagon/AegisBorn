@@ -1,0 +1,7 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;dbname=cjrgam5_ab'
+      username: cjrgam5_ab
+      password: user_ab1!

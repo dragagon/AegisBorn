@@ -1,0 +1,34 @@
+AegisBornUserProfile:
+  actAs: { Timestampable: ~ }
+  columns:
+    user_id: {type: integer, notnull: true }
+    character_slots: {type: integer, default: 1}
+  relations:
+    sfGuardUser:
+      type:           one
+      foreignType:    one
+      class:          sfGuardUser
+      local:          user_id
+      foreign:        id
+      onDelete:       cascade
+      foreignAlias:   AegisBornProfile
+
+AegisBornCharacter:
+  actAs: { Timestampable: ~ }
+  columns:
+    user_id:  { type: integer, notnull: true }
+    name:         { type: string(255), unique: true}
+    sex:          { type: string(1) }
+    class:        { type: string(50) }
+    level: {type: integer, default: 1}
+    position_x: {type: integer, default: 0 }
+    position_y: {type: integer, default: 0 }
+  relations:
+    sfGuardUser:
+      type:           one
+      foreignType:    many
+      class:          sfGuardUser
+      local:          user_id
+      foreign:        id
+      onDelete:       cascade
+      foreignAlias:   Characters

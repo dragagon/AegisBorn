@@ -1,0 +1,38 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: intro, action: index }
+
+  
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+# We implement the missing sf_guard_password feature from sfGuardPlugin
+sf_guard_password:
+  url: /reset-request
+  param: { module: sfApply, action: resetRequest }
+
+game_index:
+  url:   /home
+  param: { module: game, action: index }
+
+new_user:
+  url:   /new_user
+  param: { module: sfApply, action: apply }
+
+  # generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

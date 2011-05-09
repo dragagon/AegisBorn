@@ -1,0 +1,48 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+#all:
+
+
+all:
+
+  #...
+
+  sfApplyPlugin:
+
+    from:
+
+      email: "admin@gamename.com"
+
+      fullname: "GameName Admin"
+
+    afterLogin: game/index
+
+  sfForkedApply:
+
+    applyForm: sfApplyApplyForm
+
+    resetForm: sfApplyResetForm
+
+    resetRequestForm: sfApplyResetRequestForm
+
+    settingsForm: sfApplySettingsForm
+
+    confirmation:
+
+      reset: false
+
+      apply: false
+
+      email: false
+
+      reset_logged: false
+
+  recaptcha:
+
+    enabled:        false
+
+    public_key:     6LfyCMQSAAAAAGKVp9X14Uzheb5UCXt8-924Htxo
+
+    private_key:    6LfyCMQSAAAAAC3zZBoEVnc9u8_C-_jcGpQYv5vl
