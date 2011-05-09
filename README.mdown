@@ -1,0 +1,11 @@
+<a href="https://www.paypal.com/cgi-bin/webscr?business=cjrgaming@gmail.com&cmd=_donations&lc=US&item_name=AegisBorn+MMO+Development&currency_code=USD">Donations welcome. Click to donate!</a>
+
+Aegis Born MMO
+=======
+This is designed to be a work on progress for an MMO built from scratch following along with the crafters haven blog. It is intended to be used to learn the ropes of:
+
+* SmartFoxServer
+* Symfony Integration with SmartFoxServer
+* Network Messaging
+
+The idea behind this project is to start from scratch and build a web server, database, and MMO through Unity3d. It is a work in progress so things will be changing as they get built and talked about on the blog <a href="http://mmocraftershaven.blogspot.com/">CJR Gaming Design / Development</a>.
