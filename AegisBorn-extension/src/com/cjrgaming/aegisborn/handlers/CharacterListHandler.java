@@ -16,6 +16,7 @@ import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import javax.crypto.Cipher;
 
 /**
  *
@@ -49,6 +50,7 @@ public class CharacterListHandler  extends BaseClientRequestHandler {
             ISFSObject characterList = new SFSObject();
             int i = 0;
             trace("loading characters");
+            Cipher cipher = player.GetCipher();
             for(AegisBornCharacter character : player.getGuardUser().getAegisBornCharacterCollection())
             {
                 com.cjrgaming.aegisborn.models.AegisBornCharacter ABCharacter = new com.cjrgaming.aegisborn.models.AegisBornCharacter(character);

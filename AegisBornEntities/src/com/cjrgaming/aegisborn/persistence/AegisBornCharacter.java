@@ -20,13 +20,11 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Christian Richards
+ * @author Christian
  */
 @Entity
 @Table(name = "aegis_born_character")
@@ -47,16 +45,12 @@ public class AegisBornCharacter implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @NotNull
     @Column(name = "id")
     private Long id;
-    @Size(max = 255)
     @Column(name = "name")
     private String name;
-    @Size(max = 1)
     @Column(name = "sex")
     private String sex;
-    @Size(max = 50)
     @Column(name = "class")
     private String class1;
     @Column(name = "level")
@@ -66,12 +60,10 @@ public class AegisBornCharacter implements Serializable {
     @Column(name = "position_y")
     private BigInteger positionY;
     @Basic(optional = false)
-    @NotNull
     @Column(name = "created_at")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
     @Basic(optional = false)
-    @NotNull
     @Column(name = "updated_at")
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;

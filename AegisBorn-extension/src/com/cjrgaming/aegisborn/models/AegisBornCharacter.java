@@ -6,6 +6,7 @@ package com.cjrgaming.aegisborn.models;
 
 import com.smartfoxserver.v2.entities.data.ISFSObject;
 import com.smartfoxserver.v2.entities.data.SFSObject;
+import javax.crypto.Cipher;
 
 /**
  *

@@ -20,14 +20,12 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Christian Richards
+ * @author Christian
  */
 @Entity
 @Table(name = "sf_guard_user")
@@ -52,34 +50,23 @@ public class SfGuardUser implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @NotNull
     @Column(name = "id")
     private Long id;
-    @Size(max = 255)
     @Column(name = "first_name")
     private String firstName;
-    @Size(max = 255)
     @Column(name = "last_name")
     private String lastName;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 255)
     @Column(name = "email_address")
     private String emailAddress;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 128)
     @Column(name = "username")
     private String username;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 128)
     @Column(name = "algorithm")
     private String algorithm;
-    @Size(max = 128)
     @Column(name = "salt")
     private String salt;
-    @Size(max = 128)
     @Column(name = "password")
     private String password;
     @Column(name = "is_active")
@@ -90,12 +77,10 @@ public class SfGuardUser implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastLogin;
     @Basic(optional = false)
-    @NotNull
     @Column(name = "created_at")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
     @Basic(optional = false)
-    @NotNull
     @Column(name = "updated_at")
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
