@@ -12,5 +12,18 @@ using Sfs2X.Entities.Data;
         public delegate void AfterMessageRecieved();
         public AfterMessageRecieved afterMessageRecieved;
 
-        public abstract void HandleMessage(ISFSObject data);
+        public void HandleMessage(ISFSObject data)
+        {
+            if (beforeMessageRecieved != null)
+            {
+                beforeMessageRecieved();
+            }
+            OnHandleMessage(data);
+            if (afterMessageRecieved != null)
+            {
+                afterMessageRecieved();
+            }
+        }
+
+        public abstract void OnHandleMessage(ISFSObject data);
     }

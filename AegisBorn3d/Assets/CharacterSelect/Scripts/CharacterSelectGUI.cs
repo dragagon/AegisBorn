@@ -11,7 +11,8 @@ public class CharacterSelectGUI : ConnectionHandler {
 	
 	bool debugMessages = false;
 	CharacterSelectHandler CharacterSelect;
-	
+    bool receivedCharacters = false;
+
 	new void Awake()
     {
 	        base.Awake();
@@ -40,6 +41,30 @@ public class CharacterSelectGUI : ConnectionHandler {
 			Application.LoadLevel("Lobby");
 		}
     }
+
+    void OnGUI()
+    {
+        if (receivedCharacters)
+        {
+            foreach (Character character in CharacterSelect.characterList)
+            {
+
+            }
+
+            if (GUI.Button(new Rect(100, 165, 100, 25), "New Character") || (Event.current.type == EventType.keyDown && Event.current.character == '\n'))
+            {
+                UnregisterSFSSceneCallbacks();
+                Application.LoadLevel("CharacterCreate");
+            }
+            if (GUI.Button(new Rect(100, 195, 100, 25), "Back"))
+            {
+                UnregisterSFSSceneCallbacks();
+                smartFox.Disconnect();
+                Application.LoadLevel("Lobby");
+            }
+
+        }
+    }
 	
 	#region Connection Callbacks
 	public void OnConnectionLost(BaseEvent evt)
@@ -66,5 +91,6 @@ public class CharacterSelectGUI : ConnectionHandler {
 
     public void AfterCharacterSelect()
     {
+        receivedCharacters = true;
     }
 }

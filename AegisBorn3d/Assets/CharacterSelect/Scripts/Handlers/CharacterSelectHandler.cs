@@ -14,7 +14,7 @@ public class CharacterSelectHandler : IMessageHandler
 		maxCharacters = 0;
 	}
 	
-    public override void HandleMessage(ISFSObject data)
+    public override void OnHandleMessage(ISFSObject data)
     {
         maxCharacters = data.GetInt("maxCharacters");
         ISFSObject characters = data.GetSFSObject("characters");
