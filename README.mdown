@@ -9,3 +9,28 @@ This is designed to be a work on progress for an MMO built from scratch followin
 * Network Messaging
 
 The idea behind this project is to start from scratch and build a web server, database, and MMO through Unity3d. It is a work in progress so things will be changing as they get built and talked about on the blog <a href="http://mmocraftershaven.blogspot.com/">CJR Gaming Design / Development</a>.
+
+Aegis Born Setup
+=======
+
+XAMPP project
+-------
+In order to set this up properly you need to take the AegisBorn folder and place it in your xampp directory. Then you need to take the public_html directory from there and put it in the public_html directory of xampp.
+
+Entities
+-------
+Next you need to copy the AegisBornEntities/src/META-INF to [SmartFoxServer]/SFS2X/META-INF and copy AegisBornEntities/dist/AegisBornExtities.jar to [SmartFoxServer]/SFS2X/lib
+
+Extension
+-------
+Copy AegisBorn-extension/dist/AegisBorn-extension.jar to [SmartFoxServer]/SFS2X/extensions/AegisBornExtension
+
+Next log into the SmartFoxServer web management page (normally located at http://localhost:8080/admin ). Log into the server and go to Zone Configurator. Below the Zone section click the little green circle with the + and the second half of the window will appear.
+
+Enter AegisBorn for the zone Click the Zone extension tab. In name put AegisBornExtension - this is the name of the folder containing your jar file. In File put com.cjrgaming.aegisborn.AegisBornExtension. Click Submit at the bottom. There, now we have our extension with our java file loaded. Lets go ahead and create a general chat area.
+
+Select the zone AegisBorn click the green button with the + sign under Rooms Name it General. Leave everything else alone except the drop down for Auto-remove mode use NEVER_REMOVE. Click Submit We now have a room called General under our new zone. The room is permanent and won't go away, this is good for general chat rooms that will be accessible to everyone for things like system messages or if you want a world wide chat in your game.
+
+Now you need to restart the server to get the changes to take effect.
+
+Once the server is restarted you can open the AegisBorn3d project in Unity3d. You will need to log into the web server and create an account. You can then log into the game using this account.
