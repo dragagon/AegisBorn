@@ -40,7 +40,7 @@ public class DBLoginHandler extends BaseClientRequestHandler {
             EntityManager entityManager = ((AegisBornExtension)this.getParentExtension()).getEntityManagerFactory().createEntityManager();
             entityManager.getTransaction().begin();
             //Query q = entityManager.createQuery("SELECT s FROM SfGuardUser s WHERE s.username = :username", SfGuardUser.class);
-            Query q = entityManager.createNamedQuery("SfGuardUser.findByUsername", SfGuardUser.class);
+            Query q = entityManager.createNamedQuery("SfGuardUser.findByUsername");
             q.setParameter("username", user);
             SfGuardUser guard = (SfGuardUser)q.getSingleResult();
 

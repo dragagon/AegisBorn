@@ -36,7 +36,7 @@ public class CharacterCreationHandler extends BaseClientRequestHandler {
             AegisBornCharacter character = new AegisBornCharacter(new com.cjrgaming.aegisborn.persistence.AegisBornCharacter());
             character.loadFromSFSObject(data);
 
-            Query q = entityManager.createNamedQuery("AegisBornCharacter.findByName", com.cjrgaming.aegisborn.persistence.AegisBornCharacter.class);
+            Query q = entityManager.createNamedQuery("AegisBornCharacter.findByName");
             q.setParameter("name", character.getCharacter().getName());
             try
             {
