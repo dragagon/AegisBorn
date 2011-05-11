@@ -28,12 +28,19 @@ public class CharacterCreateGUI : ConnectionHandler
 
             // Personal message handlers
             handlers.Add("characterCreated", CharacterCreate.HandleMessage);
+            CharacterCreate.afterMessageRecieved += AfterCharacterCreated;
             // We are ready to get the character list
         }
         else
         {
             Application.LoadLevel("Lobby");
         }
+    }
+
+    public void AfterCharacterCreated()
+    {
+        UnregisterSFSSceneCallbacks();
+        Application.LoadLevel("CharacterSelect");
     }
 
     void OnGUI()

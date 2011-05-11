@@ -33,7 +33,11 @@ public class AegisBornAccount {
     private RSAPrivateKeySpec privKey;
     private RSAPublicKeySpec serverPubKey;
     private Cipher cipher;
-    private SfGuardUser guardUser;
+    
+    private long guardID;
+    private int maxCharacters;
+    private int numCharacters;
+    
     public User getSfsUser() {
         return sfsUser;
     }
@@ -85,16 +89,33 @@ public class AegisBornAccount {
         return cipher;
     }
 
-    public void setGuardUser(SfGuardUser guard)
+    public void setGuardUserValues(SfGuardUser guard)
     {
-        this.guardUser = guard;
+        maxCharacters = guard.getAegisBornUserProfileCollection().iterator().next().getCharacterSlots().intValue();
+        guardID = guard.getId();
+        numCharacters = guard.getAegisBornCharacterCollection().size();
     }
 
-    public SfGuardUser getGuardUser()
+    public long getGuardID()
     {
-        return this.guardUser;
+        return guardID;
     }
-
+    
+    public int getMaxCharacters()
+    {
+        return maxCharacters;
+    }
+    
+    public int getNumCharacters()
+    {
+        return numCharacters;
+    }
+    
+    public boolean canAddCharacters()
+    {
+        return numCharacters < maxCharacters;
+    }
+    
     private void readyCipher() throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeySpecException, InvalidKeyException {
         cipher = Cipher.getInstance("RSA");
         KeyFactory fact = KeyFactory.getInstance("RSA");

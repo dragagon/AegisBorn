@@ -6,6 +6,7 @@ package com.cjrgaming.aegisborn.handlers;
 
 import com.cjrgaming.aegisborn.AegisBornExtension;
 import com.cjrgaming.aegisborn.models.AegisBornCharacter;
+import com.cjrgaming.aegisborn.persistence.SfGuardUser;
 import com.cjrgaming.aegisborn.simulation.AegisBornAccount;
 import com.cjrgaming.aegisborn.simulation.World;
 import com.cjrgaming.aegisborn.util.RoomHelper;
@@ -28,8 +29,7 @@ public class CharacterCreationHandler extends BaseClientRequestHandler {
     {
         World world = RoomHelper.getWorld(this);
         AegisBornAccount player = world.getPlayer(u);
-        int slots = player.getGuardUser().getAegisBornUserProfileCollection().iterator().next().getCharacterSlots().intValue();
-        if (slots > player.getGuardUser().getAegisBornCharacterCollection().size())
+        if (player.canAddCharacters())
         {
             EntityManager entityManager = ((AegisBornExtension) this.getParentExtension()).getEntityManagerFactory().createEntityManager();
             entityManager.getTransaction().begin();
@@ -41,14 +41,15 @@ public class CharacterCreationHandler extends BaseClientRequestHandler {
             try
             {
                 q.getSingleResult();
-                                SFSObject err = new SFSObject();
+                SFSObject err = new SFSObject();
                 err.putUtfString("error", "That name is taken.");
                 send("error", err, u);
 
             }
             catch(NoResultException e)
             {
-                character.getCharacter().setUserId(player.getGuardUser());
+                SfGuardUser guard = entityManager.find(SfGuardUser.class, player.getGuardID());
+                character.getCharacter().setUserId(guard);
                 // No character with that name, go ahead and create it!
                 entityManager.persist(character.getCharacter());
                 entityManager.flush();

@@ -50,16 +50,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CharacterCreate\Scripts\Handlers\CharacterCreateHandler.cs" />
-     <Compile Include="Assets\CharacterCreate\Scripts\CharacterCreateGUI.cs" />
-     <Compile Include="Assets\CharacterSelect\Scripts\Handlers\CharacterSelectHandler.cs" />
-     <Compile Include="Assets\CharacterSelect\Scripts\Objects\Character.cs" />
-     <Compile Include="Assets\CharacterSelect\Scripts\CharacterSelectGUI.cs" />
-     <Compile Include="Assets\Common\Scripts\ConnectionHandler.cs" />
-     <Compile Include="Assets\Common\Scripts\EncryptionProvider.cs" />
-     <Compile Include="Assets\Common\Scripts\IMessageHandler.cs" />
-     <Compile Include="Assets\Common\Scripts\SmartFoxConnection.cs" />
-     <Compile Include="Assets\Lobby\Scripts\LobbyGUI.cs" />
+     <Compile Include="Assets\_Scripts\CharacterCreate\CharacterCreateGUI.cs" />
+     <Compile Include="Assets\_Scripts\CharacterSelect\CharacterSelectGUI.cs" />
+     <Compile Include="Assets\_Scripts\Lobby\LobbyGUI.cs" />
+     <Compile Include="Assets\_Scripts\_Common\ConnectionHandler.cs" />
+     <Compile Include="Assets\_Scripts\_Common\EncryptionProvider.cs" />
+     <Compile Include="Assets\_Scripts\_Common\IMessageHandler.cs" />
+     <Compile Include="Assets\_Scripts\_Common\SmartFoxConnection.cs" />
+     <Compile Include="Assets\_Scripts\_Handlers\CharacterCreateHandler.cs" />
+     <Compile Include="Assets\_Scripts\_Handlers\CharacterSelectHandler.cs" />
+     <Compile Include="Assets\_Scripts\_Models\Character.cs" />
  <Reference Include="SmartFox2">
  <HintPath>Assets\Plugins\SmartFox2.dll</HintPath>
  </Reference>

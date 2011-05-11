@@ -56,7 +56,7 @@ public class DBLoginHandler extends BaseClientRequestHandler {
             }
             trace("Result: " + result);
             if (guard.getPassword().equalsIgnoreCase(result)) {
-                player.setGuardUser(guard);
+                player.setGuardUserValues(guard);
                  send("loginsuccess", new SFSObject(), u);
             } else {
                 this.getApi().kickUser(u, null, "Username or Password is incorrect.", 4);

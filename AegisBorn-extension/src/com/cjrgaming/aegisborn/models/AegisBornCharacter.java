@@ -24,19 +24,27 @@ public class AegisBornCharacter
 
     public void loadFromSFSObject(ISFSObject data) 
     {
-        character.setName(data.getUtfString("characterName"));
-        character.setSex(data.getUtfString("sex"));
-        character.setClass1(data.getUtfString("characterClass"));
         character.setLevel(BigInteger.valueOf(1));
         character.setPositionX(BigInteger.ZERO);
         character.setPositionY(BigInteger.ZERO);
         character.setCreatedAt(new java.util.Date());
         character.setUpdatedAt(new java.util.Date());
+        
+        for(String key : data.getKeys())
+        {
+            if(key.equalsIgnoreCase("characterName"))
+                character.setName(data.getUtfString("characterName"));
+            if(key.equalsIgnoreCase("sex"))
+                character.setSex(data.getUtfString("sex"));
+            if(key.equalsIgnoreCase("characterClass"))
+                character.setClass1(data.getUtfString("characterClass"));
+        }
     }
 
     public ISFSObject createSFSObject() 
     {
         ISFSObject data = new SFSObject();
+        data.putLong("id", character.getId());
         data.putUtfString("name", character.getName());
         data.putInt("level", character.getLevel().intValue());
         return data;
