@@ -31,22 +31,9 @@ public class CharacterListHandler  extends BaseClientRequestHandler {
                         World world = RoomHelper.getWorld(this);
             AegisBornAccount player = world.getPlayer(u);
             
-
-            trace("loading properties");
-            Properties serverProps = new Properties();
-            try
-            {
-                InputStream in = this.getClass().getResourceAsStream("/com/cjrgaming/aegisborn/ServerConfig.properties");
-                serverProps.load(in);
-            }
-            catch(IOException e)
-            {
-                trace(e);
-            }
-
             trace("loaded properties");
             ISFSObject outputObject = new SFSObject();
-            outputObject.putInt("maxCharacters", Integer.parseInt(serverProps.getProperty("MaxCharacters", "0")));
+            outputObject.putInt("maxCharacters", player.getGuardUser().getAegisBornUserProfileCollection().iterator().next().getCharacterSlots().intValue());
             ISFSObject characterList = new SFSObject();
             int i = 0;
             trace("loading characters");

@@ -78,6 +78,7 @@ public class ConnectionHandler : MonoBehaviour
             else
             {
                 Debug.LogError("Got unhandled cmd: " + cmd);
+                Debug.LogError("" + dt.GetUtfString("error"));
             }
         }
         catch (Exception e)

@@ -27,7 +27,7 @@ public class CharacterCreateGUI : ConnectionHandler
             smartFox.AddLogListener(LogLevel.DEBUG, OnDebugMessage);
 
             // Personal message handlers
-            handlers.Add("characterlist", CharacterCreate.HandleMessage);
+            handlers.Add("characterCreated", CharacterCreate.HandleMessage);
             // We are ready to get the character list
         }
         else

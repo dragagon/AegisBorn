@@ -4,9 +4,18 @@
  */
 package com.cjrgaming.aegisborn.handlers;
 
+import com.cjrgaming.aegisborn.AegisBornExtension;
+import com.cjrgaming.aegisborn.models.AegisBornCharacter;
+import com.cjrgaming.aegisborn.simulation.AegisBornAccount;
+import com.cjrgaming.aegisborn.simulation.World;
+import com.cjrgaming.aegisborn.util.RoomHelper;
 import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSObject;
+import com.smartfoxserver.v2.entities.data.SFSObject;
 import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.Query;
 
 /**
  *
@@ -15,6 +24,43 @@ import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
 public class CharacterCreationHandler extends BaseClientRequestHandler {
 
     @Override
-    public void handleClientRequest(User u, ISFSObject data) {
+    public void handleClientRequest(User u, ISFSObject data)
+    {
+        World world = RoomHelper.getWorld(this);
+        AegisBornAccount player = world.getPlayer(u);
+        int slots = player.getGuardUser().getAegisBornUserProfileCollection().iterator().next().getCharacterSlots().intValue();
+        if (slots > player.getGuardUser().getAegisBornCharacterCollection().size())
+        {
+            EntityManager entityManager = ((AegisBornExtension) this.getParentExtension()).getEntityManagerFactory().createEntityManager();
+            entityManager.getTransaction().begin();
+            AegisBornCharacter character = new AegisBornCharacter(new com.cjrgaming.aegisborn.persistence.AegisBornCharacter());
+            character.loadFromSFSObject(data);
+
+            Query q = entityManager.createNamedQuery("AegisBornCharacter.findByName", com.cjrgaming.aegisborn.persistence.AegisBornCharacter.class);
+            q.setParameter("name", character.getCharacter().getName());
+            try
+            {
+                q.getSingleResult();
+                                SFSObject err = new SFSObject();
+                err.putUtfString("error", "That name is taken.");
+                send("error", err, u);
+
+            }
+            catch(NoResultException e)
+            {
+                character.getCharacter().setUserId(player.getGuardUser());
+                // No character with that name, go ahead and create it!
+                entityManager.persist(character.getCharacter());
+                entityManager.flush();
+                entityManager.getTransaction().commit();
+                send("characterCreated", new SFSObject(), u);
+            }
+        }
+        else
+        {
+            SFSObject err = new SFSObject();
+            err.putUtfString("error", "No empty character slots.");
+            send("error", err, u);
+        }
     }
 }
