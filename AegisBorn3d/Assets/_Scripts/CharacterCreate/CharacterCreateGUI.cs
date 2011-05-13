@@ -8,18 +8,20 @@ using Sfs2X.Logging;
 public class CharacterCreateGUI : ConnectionHandler
 {
     bool debugMessages = false;
+    bool showErrorDialog = false;
     string characterName = "";
     string sex = "";
     string characterClass = "";
 
     CharacterCreateHandler CharacterCreate;
+    ErrorHandler errorHandler;
     new void Awake()
     {
         base.Awake();
         if (smartFox.IsConnected)
         {
             CharacterCreate = new CharacterCreateHandler();
-
+            errorHandler = new ErrorHandler();
             // Register callback delegate
             smartFox.AddEventListener(SFSEvent.CONNECTION_LOST, OnConnectionLost);
             smartFox.AddEventListener(SFSEvent.LOGOUT, OnLogout);
@@ -28,13 +30,22 @@ public class CharacterCreateGUI : ConnectionHandler
 
             // Personal message handlers
             handlers.Add("characterCreated", CharacterCreate.HandleMessage);
+            handlers.Add("error", errorHandler.HandleMessage);
+ 
             CharacterCreate.afterMessageRecieved += AfterCharacterCreated;
+            errorHandler.afterMessageRecieved += AfterErrorReceived;
             // We are ready to get the character list
         }
         else
         {
             Application.LoadLevel("Lobby");
         }
+    }
+
+    public void AfterErrorReceived()
+    {
+        // get the error message and set the error "dialog" to appear with the message.
+        showErrorDialog = true;
     }
 
     public void AfterCharacterCreated()
@@ -45,6 +56,11 @@ public class CharacterCreateGUI : ConnectionHandler
 
     void OnGUI()
     {
+
+        if (showErrorDialog)
+        {
+
+        }
 
         GUI.Label(new Rect(120, 116, 100, 100), "Name: ");
         characterName = GUI.TextField(new Rect(200, 116, 200, 20), characterName, 25);
