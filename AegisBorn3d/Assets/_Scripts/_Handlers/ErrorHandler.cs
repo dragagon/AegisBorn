@@ -3,7 +3,7 @@
     string errorMessage = "";
     public override void OnHandleMessage(Sfs2X.Entities.Data.ISFSObject data)
     {
-        errorMessage = data.GetUtfStringArray("error");
+        errorMessage = data.GetUtfString("error");
     }
 
 }

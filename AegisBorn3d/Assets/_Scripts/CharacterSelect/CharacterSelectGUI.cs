@@ -56,13 +56,12 @@ public class CharacterSelectGUI : ConnectionHandler {
                 UnregisterSFSSceneCallbacks();
                 Application.LoadLevel("CharacterCreate");
             }
-            if (GUI.Button(new Rect(100, 195, 100, 25), "Back"))
-            {
-                UnregisterSFSSceneCallbacks();
-                smartFox.Disconnect();
-                Application.LoadLevel("Lobby");
-            }
-
+        }
+        if (GUI.Button(new Rect(100, 195, 100, 25), "Back"))
+        {
+            UnregisterSFSSceneCallbacks();
+            smartFox.Disconnect();
+            Application.LoadLevel("Lobby");
         }
     }
 	
