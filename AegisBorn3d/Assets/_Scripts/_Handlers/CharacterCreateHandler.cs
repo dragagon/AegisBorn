@@ -7,5 +7,4 @@ public class CharacterCreateHandler : IMessageHandler
     {
         Debug.Log("Character created successfully, going back to character select");
     }
-
 }
