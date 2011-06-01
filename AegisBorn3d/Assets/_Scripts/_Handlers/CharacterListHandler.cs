@@ -3,12 +3,12 @@ using Sfs2X.Entities.Data;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterSelectHandler : IMessageHandler
+public class CharacterListHandler : IMessageHandler
 {
 	public List<Character> characterList;
 	public int maxCharacters;
 	
-	public CharacterSelectHandler ()
+	public CharacterListHandler ()
 	{
 		characterList = new List<Character>();
 		maxCharacters = 0;

@@ -34,5 +34,17 @@ public class Character
         }
         return newCharacter;
     }
+
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+
+    public long ID
+    {
+        get { return id; }
+        set { id = value; }
+    }
 }
 

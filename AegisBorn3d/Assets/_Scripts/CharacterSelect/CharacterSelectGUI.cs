@@ -10,15 +10,20 @@ using Sfs2X.Util;
 public class CharacterSelectGUI : ConnectionHandler {
 	
 	bool debugMessages = false;
-	CharacterSelectHandler CharacterSelect;
+	CharacterListHandler CharacterList;
+    CharacterSelectedHandler CharacterSelected;
+
     bool receivedCharacters = false;
+    ErrorHandler errorHandler;
 
 	new void Awake()
     {
 	        base.Awake();
 		if(smartFox.IsConnected)
 		{
-			CharacterSelect = new CharacterSelectHandler();
+			CharacterList = new CharacterListHandler();
+            CharacterSelected = new CharacterSelectedHandler();
+            errorHandler = new ErrorHandler();
 
 	        // Register callback delegate
 	        smartFox.AddEventListener(SFSEvent.CONNECTION_LOST, OnConnectionLost);
@@ -27,8 +32,12 @@ public class CharacterSelectGUI : ConnectionHandler {
 	        smartFox.AddLogListener(LogLevel.DEBUG, OnDebugMessage);
 				
 			// Personal message handlers
-            handlers.Add("characterlist", CharacterSelect.HandleMessage);
-            CharacterSelect.afterMessageRecieved += AfterCharacterSelect;
+            handlers.Add("characterlist", CharacterList.HandleMessage);
+            handlers.Add("characterSelected", CharacterSelected.HandleMessage);
+            handlers.Add("error", errorHandler.HandleMessage);
+
+            CharacterList.afterMessageRecieved += AfterCharacterList;
+            CharacterSelected.afterMessageRecieved += AfterCharacterSelected;
 			// We are ready to get the character list
 			ISFSObject data = new SFSObject();
 	
@@ -46,9 +55,23 @@ public class CharacterSelectGUI : ConnectionHandler {
     {
         if (receivedCharacters)
         {
-            foreach (Character character in CharacterSelect.characterList)
+            GUI.Box(new Rect(300, 10, 100, 300), "Classes");
+
+            int yPos = 50;
+
+            foreach (Character character in CharacterList.characterList)
             {
 
+                if (GUI.Button(new Rect(310, yPos, 80, 50), character.Name))
+                {
+                    ISFSObject data = new SFSObject();
+                    data.PutLong("characterID", character.ID);
+                    Debug.Log("Logging in as character ID: " + character.ID);
+                    ExtensionRequest request = new ExtensionRequest("selectCharacter", data);
+                    smartFox.Send(request);
+                }
+
+                yPos += 60;
             }
 
             if (GUI.Button(new Rect(100, 165, 100, 25), "New Character") || (Event.current.type == EventType.keyDown && Event.current.character == '\n'))
@@ -88,8 +111,15 @@ public class CharacterSelectGUI : ConnectionHandler {
     }
 	#endregion
 
-    public void AfterCharacterSelect()
+    public void AfterCharacterList()
     {
         receivedCharacters = true;
+    }
+
+    public void AfterCharacterSelected()
+    {
+        Debug.Log("going to main game");
+        UnregisterSFSSceneCallbacks();
+        Application.LoadLevel("Game");
     }
 }

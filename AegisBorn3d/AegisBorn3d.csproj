@@ -58,7 +58,8 @@
      <Compile Include="Assets\_Scripts\_Common\IMessageHandler.cs" />
      <Compile Include="Assets\_Scripts\_Common\SmartFoxConnection.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\CharacterCreateHandler.cs" />
-     <Compile Include="Assets\_Scripts\_Handlers\CharacterSelectHandler.cs" />
+     <Compile Include="Assets\_Scripts\_Handlers\CharacterListHandler.cs" />
+     <Compile Include="Assets\_Scripts\_Handlers\CharacterSelectedHandler.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\ErrorHandler.cs" />
      <Compile Include="Assets\_Scripts\_Models\Character.cs" />
  <Reference Include="SmartFox2">

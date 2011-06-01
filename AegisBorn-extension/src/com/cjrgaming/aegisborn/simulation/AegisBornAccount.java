@@ -4,6 +4,7 @@
  */
 package com.cjrgaming.aegisborn.simulation;
 
+import com.cjrgaming.aegisborn.models.AegisBornCharacter;
 import com.cjrgaming.aegisborn.persistence.SfGuardUser;
 import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSObject;
@@ -37,6 +38,8 @@ public class AegisBornAccount {
     private long guardID;
     private int maxCharacters;
     private int numCharacters;
+    
+    private AegisBornCharacter selectedCharacter;
     
     public User getSfsUser() {
         return sfsUser;
@@ -136,5 +139,13 @@ public class AegisBornAccount {
 
     }
 
-
+    public void setSelectedCharacter(AegisBornCharacter character)
+    {
+        selectedCharacter = character;
+    }
+    
+    public AegisBornCharacter getSelectedCharacter()
+    {
+        return selectedCharacter;
+    }
 }

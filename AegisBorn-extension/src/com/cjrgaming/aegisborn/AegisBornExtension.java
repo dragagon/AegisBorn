@@ -6,6 +6,7 @@ package com.cjrgaming.aegisborn;
 
 import com.cjrgaming.aegisborn.handlers.CharacterCreationHandler;
 import com.cjrgaming.aegisborn.handlers.CharacterListHandler;
+import com.cjrgaming.aegisborn.handlers.CharacterSelectHandler;
 import com.cjrgaming.aegisborn.handlers.DBLoginHandler;
 import com.cjrgaming.aegisborn.handlers.OnUserGoneHandler;
 import com.cjrgaming.aegisborn.handlers.PublicKeyHandler;
@@ -36,6 +37,7 @@ public class AegisBornExtension extends SFSExtension {
         addRequestHandler("login", DBLoginHandler.class);
         addRequestHandler("getCharacters", CharacterListHandler.class);
         addRequestHandler("createCharacter", CharacterCreationHandler.class);
+        addRequestHandler("selectCharacter", CharacterSelectHandler.class);
 
         addEventHandler(SFSEventType.USER_DISCONNECT, OnUserGoneHandler.class);
         addEventHandler(SFSEventType.USER_LEAVE_ROOM, OnUserGoneHandler.class);

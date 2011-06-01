@@ -33,11 +33,11 @@ public class AegisBornCharacter
         for(String key : data.getKeys())
         {
             if(key.equalsIgnoreCase("characterName"))
-                character.setName(data.getUtfString("characterName"));
+                character.setName(data.getUtfString(key));
             if(key.equalsIgnoreCase("sex"))
-                character.setSex(data.getUtfString("sex"));
+                character.setSex(data.getUtfString(key));
             if(key.equalsIgnoreCase("characterClass"))
-                character.setClass1(data.getUtfString("characterClass"));
+                character.setClass1(data.getUtfString(key));
         }
     }
 
