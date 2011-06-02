@@ -6,7 +6,6 @@ package com.cjrgaming.aegisborn.handlers;
 
 import com.cjrgaming.aegisborn.AegisBornExtension;
 import com.cjrgaming.aegisborn.models.AegisBornCharacter;
-import com.cjrgaming.aegisborn.persistence.SfGuardUser;
 import com.cjrgaming.aegisborn.simulation.AegisBornAccount;
 import com.cjrgaming.aegisborn.simulation.World;
 import com.cjrgaming.aegisborn.util.RoomHelper;
