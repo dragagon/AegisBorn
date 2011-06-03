@@ -66,7 +66,7 @@ public class LobbyGUI : ConnectionHandler
             }
             if (GUI.Button(new Rect(100, 195, 100, 25), "Logout"))
             {
-                UnregisterSFSSceneCallbacks();
+                smartFox.Disconnect();
             }
     }
 

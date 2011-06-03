@@ -55,12 +55,15 @@
      <Compile Include="Assets\_Scripts\Lobby\LobbyGUI.cs" />
      <Compile Include="Assets\_Scripts\_Common\ConnectionHandler.cs" />
      <Compile Include="Assets\_Scripts\_Common\EncryptionProvider.cs" />
+     <Compile Include="Assets\_Scripts\_Common\IClientMessage.cs" />
      <Compile Include="Assets\_Scripts\_Common\IMessageHandler.cs" />
+     <Compile Include="Assets\_Scripts\_Common\IServerMessage.cs" />
      <Compile Include="Assets\_Scripts\_Common\SmartFoxConnection.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\CharacterCreateHandler.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\CharacterListHandler.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\CharacterSelectedHandler.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\ErrorHandler.cs" />
+     <Compile Include="Assets\_Scripts\_Messages\Client\LoginMessage.cs" />
      <Compile Include="Assets\_Scripts\_Models\Character.cs" />
  <Reference Include="SmartFox2">
  <HintPath>Assets\Plugins\SmartFox2.dll</HintPath>
