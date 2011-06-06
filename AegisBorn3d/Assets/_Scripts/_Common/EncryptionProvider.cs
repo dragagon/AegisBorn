@@ -49,10 +49,10 @@ public class EncryptionProvider
     public void SetServerPublicKeyParameters(RSAParameters param)
 	{
         HasServerPK = true;
-		Debug.Log("Got Server Public Key");
 		ServerRSA = new RSACryptoServiceProvider();
 		ServerRSA.ImportParameters(param);
-	}
+        Debug.Log("Got Server Public Key");
+    }
 
     #region Encrypt Functions
     public ByteArray EncryptString(string strToEncrypt)

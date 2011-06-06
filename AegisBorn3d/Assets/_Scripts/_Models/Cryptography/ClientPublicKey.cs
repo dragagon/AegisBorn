@@ -8,7 +8,7 @@ using Sfs2X.Util;
 public class ClientPublicKey : SendableObject
 {
 
-    public Sfs2X.Entities.Data.ISFSObject ToSFSObject()
+    public override ISFSObject ToSFSObject()
     {
         EncryptionProvider provider = EncryptionProvider.GetInstance();
         ISFSObject tr = new SFSObject();

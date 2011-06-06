@@ -120,7 +120,7 @@ public class SendableObject : ISendableObject
     }
 
 
-    public ISFSObject ToSFSObject()
+    public virtual ISFSObject ToSFSObject()
     {
         return data;
     }

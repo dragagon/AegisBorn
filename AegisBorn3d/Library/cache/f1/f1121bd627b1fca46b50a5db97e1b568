@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Sfs2X;
 
-class GetCharactersMessage : IClientMessage
+class GetCharactersMessage : SendableObject
 {
     public GetCharactersMessage(SmartFox conn, bool encrypt)
         : base(conn, encrypt)

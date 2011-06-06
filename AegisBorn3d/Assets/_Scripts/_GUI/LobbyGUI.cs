@@ -40,10 +40,11 @@ public class LobbyGUI : ConnectionHandler
 		
         smartFox.AddLogListener(LogLevel.DEBUG, OnDebugMessage);
 
-        handlers.Add("publickey", serverPublicKeyHandler.OnHandleMessage);
+        serverPublicKeyHandler.afterMessageRecieved += Login_AfterServerPKRecieved;
+
+        handlers.Add("publickey", serverPublicKeyHandler.HandleMessage);
 		handlers.Add("loginsuccess", OnLoginSuccess);
 
-        serverPublicKeyHandler.afterMessageRecieved += Login_AfterServerPKRecieved;
 
     }
 
