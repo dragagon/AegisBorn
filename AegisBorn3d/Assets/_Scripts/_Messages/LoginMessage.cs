@@ -3,7 +3,7 @@ using System.Collections;
 using Sfs2X;
 using Sfs2X.Entities.Data;
 
-public class LoginMessage : IClientMessage {
+public class LoginMessage : SendableObject {
     public LoginMessage(SmartFox conn, bool encrypt, string username, string password)
         : base(conn, encrypt)
     {

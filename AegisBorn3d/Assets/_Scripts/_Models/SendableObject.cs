@@ -6,7 +6,7 @@ using Sfs2X.Entities.Data;
 using Sfs2X;
 using Sfs2X.Requests;
 
-public abstract class IClientMessage
+public class SendableObject : ISendableObject
 {
     private SmartFox connection
     {
@@ -30,7 +30,7 @@ public abstract class IClientMessage
 
     private EncryptionProvider provider;
 
-    public IClientMessage(SmartFox conn, bool encrypt)
+    public SendableObject(SmartFox conn, bool encrypt)
     {
         provider = EncryptionProvider.GetInstance();
         sendEncrypted = encrypt;
@@ -43,7 +43,7 @@ public abstract class IClientMessage
         connection.Send(new ExtensionRequest(packetName, data));
     }
 
-    protected IClientMessage()
+    protected SendableObject()
     {
     }
 
@@ -119,4 +119,9 @@ public abstract class IClientMessage
         }
     }
 
+
+    public ISFSObject ToSFSObject()
+    {
+        return data;
+    }
 }

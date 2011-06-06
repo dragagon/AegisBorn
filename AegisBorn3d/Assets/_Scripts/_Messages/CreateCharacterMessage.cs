@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Sfs2X;
 
-class CreateCharacterMessage : IClientMessage
+class CreateCharacterMessage : SendableObject
 {
 
     public CreateCharacterMessage(SmartFox conn, bool encrypt, string characterName, string sex, string characterClass)

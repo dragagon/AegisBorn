@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Sfs2X;
 
-class SelectCharacterMessage : IClientMessage
+class SelectCharacterMessage : SendableObject
 {
     public SelectCharacterMessage(SmartFox conn, bool encrypt, long characterId)
         : base(conn, encrypt)

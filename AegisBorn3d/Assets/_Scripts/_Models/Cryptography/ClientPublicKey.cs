@@ -5,7 +5,7 @@ using System.Text;
 using Sfs2X.Entities.Data;
 using Sfs2X.Util;
 
-public class ClientPublicKey : ISendableObject
+public class ClientPublicKey : SendableObject
 {
 
     public Sfs2X.Entities.Data.ISFSObject ToSFSObject()

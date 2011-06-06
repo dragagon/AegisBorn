@@ -6,7 +6,7 @@ using Sfs2X;
 using Sfs2X.Entities.Data;
 using Sfs2X.Util;
 
-class PublicKeyMessage : IClientMessage
+class PublicKeyMessage : SendableObject
 {
     public PublicKeyMessage(SmartFox conn, EncryptionProvider provider)
         : base(conn, false)
