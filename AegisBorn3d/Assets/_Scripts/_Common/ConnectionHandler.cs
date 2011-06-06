@@ -10,6 +10,7 @@ using Sfs2X;
 
 public class ConnectionHandler : MonoBehaviour
 {
+    bool debugMessages = false;
     protected SmartFox smartFox;
     public string registerZone = "register";
     public bool debug = true;
@@ -87,5 +88,28 @@ public class ConnectionHandler : MonoBehaviour
         }
 
     }
+
+    #region Connection Callbacks
+    public virtual void OnConnectionLost(BaseEvent evt)
+    {
+        // Display popup, when user hits ok, return to lobby.
+        //loginErrorMessage = "Connection lost / no connection to server";
+        Application.LoadLevel("Lobby");
+    }
+
+    public virtual void OnLogout(BaseEvent evt)
+    {
+        Application.LoadLevel("Lobby");
+    }
+
+    public virtual void OnDebugMessage(BaseEvent evt)
+    {
+        string message = (string)evt.Params["message"];
+        if (debugMessages)
+        {
+            Debug.Log("**** DEBUG ****" + message);
+        }
+    }
+    #endregion
 
 }

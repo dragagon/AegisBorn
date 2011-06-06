@@ -18,10 +18,15 @@ public class CharacterListHandler : IMessageHandler
     {
         maxCharacters = data.GetInt("maxCharacters");
         ISFSObject characters = data.GetSFSObject("characters");
+        Character character;
         foreach (string key in characters.GetKeys())
         {
+            character = new Character();
             Debug.Log("Adding character: " + key);
-            characterList.Add(Character.LoadFromSFSObject(characters.GetSFSObject(key)));
+            if (character.FromSFSObject(characters.GetSFSObject(key)))
+            {
+                characterList.Add(character);
+            }
         }
 
         Debug.Log("Max: " + maxCharacters);

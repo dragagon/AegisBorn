@@ -50,21 +50,30 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\CharacterCreate\CharacterCreateGUI.cs" />
-     <Compile Include="Assets\_Scripts\CharacterSelect\CharacterSelectGUI.cs" />
-     <Compile Include="Assets\_Scripts\Lobby\LobbyGUI.cs" />
      <Compile Include="Assets\_Scripts\_Common\ConnectionHandler.cs" />
      <Compile Include="Assets\_Scripts\_Common\EncryptionProvider.cs" />
-     <Compile Include="Assets\_Scripts\_Common\IClientMessage.cs" />
      <Compile Include="Assets\_Scripts\_Common\IMessageHandler.cs" />
-     <Compile Include="Assets\_Scripts\_Common\IServerMessage.cs" />
      <Compile Include="Assets\_Scripts\_Common\SmartFoxConnection.cs" />
+     <Compile Include="Assets\_Scripts\_GUI\CharacterCreateGUI.cs" />
+     <Compile Include="Assets\_Scripts\_GUI\CharacterSelectGUI.cs" />
+     <Compile Include="Assets\_Scripts\_GUI\LobbyGUI.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\CharacterCreateHandler.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\CharacterListHandler.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\CharacterSelectedHandler.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\ErrorHandler.cs" />
-     <Compile Include="Assets\_Scripts\_Messages\Client\LoginMessage.cs" />
-     <Compile Include="Assets\_Scripts\_Models\Character.cs" />
+     <Compile Include="Assets\_Scripts\_Handlers\ServerPublicKeyHandler.cs" />
+     <Compile Include="Assets\_Scripts\_Messages\CreateCharacterMessage.cs" />
+     <Compile Include="Assets\_Scripts\_Messages\GetCharactersMessage.cs" />
+     <Compile Include="Assets\_Scripts\_Messages\IClientMessage.cs" />
+     <Compile Include="Assets\_Scripts\_Messages\LoginMessage.cs" />
+     <Compile Include="Assets\_Scripts\_Messages\PublicKeyMessage.cs" />
+     <Compile Include="Assets\_Scripts\_Messages\SelectCharacterMessage.cs" />
+     <Compile Include="Assets\_Scripts\_Models\Cryptography\ClientPublicKey.cs" />
+     <Compile Include="Assets\_Scripts\_Models\Cryptography\ServerPublicKey.cs" />
+     <Compile Include="Assets\_Scripts\_Models\Entity\Character.cs" />
+     <Compile Include="Assets\_Scripts\_Models\IReceivableObject.cs" />
+     <Compile Include="Assets\_Scripts\_Models\ISendableObject.cs" />
+     <Compile Include="Assets\_Scripts\_Models\ReceivableObject.cs" />
  <Reference Include="SmartFox2">
  <HintPath>Assets\Plugins\SmartFox2.dll</HintPath>
  </Reference>

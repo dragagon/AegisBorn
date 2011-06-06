@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class EncryptionProvider
 {
-	// Singleton pattern
-	private static EncryptionProvider provider;
+    #region Singleton pattern
+    private static EncryptionProvider provider;
     public static EncryptionProvider GetInstance()
     {
 		if(provider == null)
@@ -17,58 +17,56 @@ public class EncryptionProvider
 		return provider;
     }
 
-    public delegate void AfterServerPKRecieved();
-    public AfterServerPKRecieved afterServerPKRecieved;
+    #endregion
 
+    #region Properties
     public bool HasServerPK
     {
         get;
         protected set;
     }
 
-	RSACryptoServiceProvider ClientRSA;
-	RSACryptoServiceProvider ServerRSA;
+    public RSACryptoServiceProvider ClientRSA
+    {
+        get;
+        set;
+    }
 
-	private EncryptionProvider()
+    public RSACryptoServiceProvider ServerRSA
+    {
+        get;
+        set;
+    }
+
+    #endregion
+
+    private EncryptionProvider()
 	{
 		ClientRSA = new RSACryptoServiceProvider();
         HasServerPK = false;
 	}
-	
-	public ISFSObject ClientPublicKeyToSFSObject()
-	{
-		ISFSObject tr = new SFSObject();
-				
-		tr.PutByteArray("mod", new ByteArray(ClientRSA.ExportParameters(false).Modulus));
-		tr.PutByteArray("exp", new ByteArray(ClientRSA.ExportParameters(false).Exponent));
-		
-		ISFSObject data = new SFSObject();
-		data.PutSFSObject("key", tr);
-		
-		return data;
-	}
-	
-	public void ServerPublicKeyFromSFSObject(ISFSObject data)
+
+    public void SetServerPublicKeyParameters(RSAParameters param)
 	{
         HasServerPK = true;
 		Debug.Log("Got Server Public Key");
-		ISFSObject playerData = data.GetSFSObject("key");
 		ServerRSA = new RSACryptoServiceProvider();
-		RSAParameters param = new RSAParameters();
-		param.Modulus = playerData.GetByteArray("mod").Bytes;
-		param.Exponent = playerData.GetByteArray("exp").Bytes;
 		ServerRSA.ImportParameters(param);
-
-        afterServerPKRecieved();
 	}
 
-	public ByteArray EncryptString(string strToEncrypt)
+    #region Encrypt Functions
+    public ByteArray EncryptString(string strToEncrypt)
 	{
 		System.Text.UTF8Encoding enc = new System.Text.UTF8Encoding();
 		return new ByteArray(ServerRSA.Encrypt(enc.GetBytes(strToEncrypt), false));
 	}
 
     public ByteArray EncryptInt(int itemToEncrypt)
+    {
+        return new ByteArray(ServerRSA.Encrypt(BitConverter.GetBytes(itemToEncrypt), false));
+    }
+
+    public ByteArray EncryptLong(long itemToEncrypt)
     {
         return new ByteArray(ServerRSA.Encrypt(BitConverter.GetBytes(itemToEncrypt), false));
     }
@@ -88,6 +86,9 @@ public class EncryptionProvider
         return new ByteArray(ServerRSA.Encrypt(BitConverter.GetBytes(itemToEncrypt), false));
     }
 
+    #endregion
+
+    #region Decrypt Functions
     public string DecryptString(ByteArray strTodecrypt)
     {
         return BitConverter.ToString(ClientRSA.Decrypt(strTodecrypt.Bytes, false));
@@ -96,6 +97,11 @@ public class EncryptionProvider
     public int DecryptInt(ByteArray itemToDecrypt)
     {
         return BitConverter.ToInt32(ClientRSA.Decrypt(itemToDecrypt.Bytes, false), 0);
+    }
+
+    public long DecryptLong(ByteArray itemToDecrypt)
+    {
+        return BitConverter.ToInt64(ClientRSA.Decrypt(itemToDecrypt.Bytes, false), 0);
     }
 
     public bool DecryptBool(ByteArray itemToDecrypt)
@@ -112,5 +118,6 @@ public class EncryptionProvider
     {
         return BitConverter.ToDouble(ClientRSA.Decrypt(itemToDecrypt.Bytes, false), 0);
     }
+    #endregion
 }
 
