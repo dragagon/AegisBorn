@@ -23,6 +23,8 @@ Next you need to copy the AegisBornEntities/src/META-INF to [SmartFoxServer]/SFS
 
 Extension
 -------
+First you will need to copy over all the libraries. Copy AegisBorn-extension/dist/lib/* to [SmartFoxServer]SFS2X/lib/*
+
 Copy AegisBorn-extension/dist/AegisBorn-extension.jar to [SmartFoxServer]/SFS2X/extensions/AegisBornExtension
 
 Next log into the SmartFoxServer web management page (normally located at http://localhost:8080/admin ). Log into the server and go to Zone Configurator. Below the Zone section click the little green circle with the + and the second half of the window will appear.
