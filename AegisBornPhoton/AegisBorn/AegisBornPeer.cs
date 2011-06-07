@@ -1,31 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Photon.SocketServer;
+﻿using Photon.SocketServer;
+using Photon.SocketServer.Rpc;
 
 namespace AegisBorn
 {
-    class AegisBornPeer : IPeer
+    class AegisBornPeer : Peer, IOperationHandler
     {
-        private readonly PhotonPeer photonPeer;
-
         public AegisBornPeer(PhotonPeer photonPeer)
+            : base(photonPeer)
         {
-            this.photonPeer = photonPeer;
+            this.SetCurrentOperationHandler(this);
         }
 
-        public void OnDisconnect()
+        public void OnDisconnect(Peer peer)
         {
+            this.SetCurrentOperationHandler(OperationHandlerDisconnected.Instance);
+            this.Dispose();
         }
 
-        public void OnOperationRequest(OperationRequest request)
+        public void OnDisconnectByOtherPeer(Peer peer)
         {
+            peer.ResponseQueue.EnqueueAction(() => peer.RequestQueue.EnqueueAction(() => peer.PhotonPeer.Disconnect()));
         }
 
-        public PhotonPeer PhotonPeer
+        public OperationResponse OnOperationRequest(Peer peer, OperationRequest operationRequest)
         {
-            get { return this.photonPeer; }
+            return new OperationResponse(operationRequest, 0, "Ok");
         }
     }
 }

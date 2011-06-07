@@ -1,0 +1,9 @@
+C:\development\AegisBornPhoton\AegisBorn\bin\Debug\AegisBorn.dll
+C:\development\AegisBornPhoton\AegisBorn\bin\Debug\AegisBorn.pdb
+C:\development\AegisBornPhoton\AegisBorn\bin\Debug\ExitGamesLibs.dll
+C:\development\AegisBornPhoton\AegisBorn\bin\Debug\Photon.SocketServer.dll
+C:\development\AegisBornPhoton\AegisBorn\bin\Debug\ExitGamesLibs.pdb
+C:\development\AegisBornPhoton\AegisBorn\bin\Debug\Photon.SocketServer.pdb
+C:\development\AegisBornPhoton\AegisBorn\obj\Debug\ResolveAssemblyReference.cache
+C:\development\AegisBornPhoton\AegisBorn\obj\Debug\AegisBorn.dll
+C:\development\AegisBornPhoton\AegisBorn\obj\Debug\AegisBorn.pdb

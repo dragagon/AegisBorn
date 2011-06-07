@@ -32,13 +32,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExitGamesLibs">
-      <HintPath>..\..\..\lib\ExitGamesLibs.dll</HintPath>
+      <HintPath>..\..\..\Photon\lib\ExitGamesLibs.dll</HintPath>
     </Reference>
     <Reference Include="Photon.SocketServer">
-      <HintPath>..\..\..\lib\Photon.SocketServer.dll</HintPath>
+      <HintPath>..\..\..\Photon\lib\Photon.SocketServer.dll</HintPath>
     </Reference>
     <Reference Include="PhotonHostRuntimeInterfaces">
-      <HintPath>..\..\..\lib\PhotonHostRuntimeInterfaces.dll</HintPath>
+      <HintPath>..\..\..\Photon\lib\PhotonHostRuntimeInterfaces.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
