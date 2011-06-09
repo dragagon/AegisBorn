@@ -50,7 +50,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\Game.cs" />
      <Compile Include="Assets\_Scripts\Login.cs" />
+ <Reference Include="PhotonUnity3D">
+ <HintPath>Assets\Plugins\PhotonUnity3D.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

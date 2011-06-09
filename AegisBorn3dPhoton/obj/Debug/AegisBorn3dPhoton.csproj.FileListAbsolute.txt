@@ -1,0 +1,17 @@
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\Irrelvant.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\Irrelvant.pdb
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\Boo.Lang.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\PhotonUnity3D.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\UnityEditor.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\UnityEngine.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\UnityScript.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\nunit.framework.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\Boo.Lang.Compiler.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\UnityScript.Lang.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\Boo.Lang.PatternMatching.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\Boo.Lang.Parser.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\Boo.Lang.Useful.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\Mono.Security.dll
+C:\development\AegisBorn3dPhoton\obj\Debug\ResolveAssemblyReference.cache
+C:\development\AegisBorn3dPhoton\obj\Debug\Irrelvant.dll
+C:\development\AegisBorn3dPhoton\obj\Debug\Irrelvant.pdb

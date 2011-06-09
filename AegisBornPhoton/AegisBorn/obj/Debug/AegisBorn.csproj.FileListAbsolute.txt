@@ -7,3 +7,5 @@ C:\development\AegisBornPhoton\AegisBorn\bin\Debug\Photon.SocketServer.pdb
 C:\development\AegisBornPhoton\AegisBorn\obj\Debug\ResolveAssemblyReference.cache
 C:\development\AegisBornPhoton\AegisBorn\obj\Debug\AegisBorn.dll
 C:\development\AegisBornPhoton\AegisBorn\obj\Debug\AegisBorn.pdb
+C:\Photon\deploy\AegisBorn\AegisBorn.dll
+C:\Photon\deploy\AegisBorn\AegisBorn.pdb
