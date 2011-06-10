@@ -1,0 +1,39 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1686" fromTop="22" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="94" fromTop="4" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="394" fromTop="17" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="527" fromTop="21" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="203" fromTop="11" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="0" fromTop="0" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1777" fromTop="29" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1509" fromTop="14" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="1001" fromTop="24" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="723" fromTop="24" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="438" fromTop="8" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="20" fromTop="1" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="120" fromTop="7" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

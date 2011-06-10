@@ -1,0 +1,31 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornApplication.cs" caret="0" fromTop="0" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornPeer.cs" caret="177" fromTop="7" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornPeer.cs" caret="403" fromTop="16" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornPeer.cs" caret="288" fromTop="11" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornApplication.cs" caret="0" fromTop="0" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

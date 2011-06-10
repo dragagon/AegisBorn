@@ -1,0 +1,7 @@
+R# version: 5.1.3000.12
+assembly UnityEngine, Version=0.0.0.0, Culture=neutral
+  file C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll mtime 3/2/2011 9:15:48 AM
+referenced assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  file C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll mtime 2/7/2011 11:35:26 PM
+referenced assembly Boo.Lang, Version=2.0.9.5, Culture=neutral, PublicKeyToken=32c39770e9a21a67
+  file C:\Program Files (x86)\Unity\Editor\Data\Mono\lib\mono\unity\Boo.Lang.dll mtime 3/1/2011 12:58:28 PM

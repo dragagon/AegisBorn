@@ -1,23 +1,27 @@
 ﻿using System;
 using ExitGames.Client.Photon;
+using System.Collections;
 
 public class Game : IPhotonPeerListener
 {
 
-    PhotonPeer peer;
+    PhotonPeer _peer;
 
-    public string status = "disconnected";
+    public string Status = "disconnected";
 
     public void DebugReturn(DebugLevel level, string message)
     {
     }
 
-    public void EventAction(byte eventCode, System.Collections.Hashtable photonEvent)
+    public void EventAction(byte eventCode, Hashtable photonEvent)
     {
     }
 
-    public void OperationResult(byte opCode, int returnCode, System.Collections.Hashtable returnValues, short invocID)
+    public void OperationResult(byte opCode, int returnCode, Hashtable returnValues, short invocId)
     {
+        var debug = (string)returnValues[(byte)100];
+
+        Status = debug;
     }
 
     public void PeerStatusCallback(StatusCode statusCode)
@@ -26,7 +30,7 @@ public class Game : IPhotonPeerListener
         {
             case StatusCode.Connect:
                 {
-                    status = "connected";
+                    Status = "connected";
                     break;
                 }
 
@@ -36,13 +40,13 @@ public class Game : IPhotonPeerListener
             case StatusCode.DisconnectByServerUserLimit:
             case StatusCode.TimeoutDisconnect:
                 {
-                    status = "disconnected";
+                    Status = "disconnected";
                     break;
                 }
 
             default:
                 {
-                    status = "unexpected";
+                    Status = "unexpected";
                     break;
                 }
         }
@@ -50,17 +54,22 @@ public class Game : IPhotonPeerListener
 
     public void Initialize(PhotonPeer peer, string serverAddress, string applicationName)
     {
-        this.peer = peer;
+        _peer = peer;
         peer.Connect(serverAddress, applicationName);
     }
 
     public void Disconnect()
     {
-        peer.Disconnect();
+        _peer.Disconnect();
     }
 
     public void Update()
     {
-        peer.Service();
+        _peer.Service();
+    }
+
+    public void SendOp()
+    {
+        _peer.OpCustom(100, new Hashtable(), true, 0);
     }
 }

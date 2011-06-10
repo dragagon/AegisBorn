@@ -1,5 +1,4 @@
-﻿using System;
-using Photon.SocketServer;
+﻿using Photon.SocketServer;
 
 namespace AegisBorn
 {
