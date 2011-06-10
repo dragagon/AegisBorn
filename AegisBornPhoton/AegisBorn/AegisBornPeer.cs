@@ -9,7 +9,7 @@ namespace AegisBorn
     class AegisBornPeer : Peer, IOperationHandler
     {
 
-                    private static readonly OperationMethodInfoCache Operations = new OperationMethodInfoCache();
+        private static readonly OperationMethodInfoCache Operations = new OperationMethodInfoCache();
 
         private readonly OperationDispatcher _dispatcher;
 

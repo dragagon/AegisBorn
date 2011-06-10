@@ -54,6 +54,12 @@
     <Compile Include="AegisBornPeer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AegisBornCommon\AegisBornCommon.csproj">
+      <Project>{6219BCA1-BD90-4C67-B02D-3F11E902892F}</Project>
+      <Name>AegisBornCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
