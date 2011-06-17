@@ -1,0 +1,5 @@
+C:\development\AegisBorn3dPhoton\Assets\Plugins\AegisBornCommon.dll
+C:\development\AegisBorn3dPhoton\Assets\Plugins\AegisBornCommon.pdb
+C:\development\AegisBornPhoton\AegisBornCommon\obj\Debug\ResolveAssemblyReference.cache
+C:\development\AegisBornPhoton\AegisBornCommon\obj\Debug\AegisBornCommon.dll
+C:\development\AegisBornPhoton\AegisBornCommon\obj\Debug\AegisBornCommon.pdb

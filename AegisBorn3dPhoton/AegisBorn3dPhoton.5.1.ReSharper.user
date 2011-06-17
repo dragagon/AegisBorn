@@ -8,24 +8,43 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="551" fromTop="32" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="786" fromTop="33" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Disconnected.cs" caret="698" fromTop="21" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="51" fromTop="2" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="950" fromTop="28" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1838" fromTop="34" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="1154" fromTop="56" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="316" fromTop="17" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="449" fromTop="21" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="191" fromTop="11" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="0" fromTop="0" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1672" fromTop="29" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="931" fromTop="24" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="653" fromTop="24" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="20" fromTop="1" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="120" fromTop="7" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="191" fromTop="10" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1501" fromTop="19" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="191" fromTop="26" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="191" fromTop="10" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="382" fromTop="23" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1537" fromTop="24" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="2243" fromTop="36" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="2261" fromTop="32" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Disconnected.cs" caret="895" fromTop="22" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Disconnected.cs" caret="691" fromTop="17" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Disconnected.cs" caret="434" fromTop="12" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Disconnected.cs" caret="0" fromTop="0" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="145" fromTop="5" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="169" fromTop="8" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="1715" fromTop="29" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="745" fromTop="21" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="1624" fromTop="47" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="981" fromTop="22" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="1346" fromTop="32" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="1496" fromTop="38" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="716" fromTop="26" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1738" fromTop="30" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1491" fromTop="13" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="853" fromTop="22" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="308" fromTop="10" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="370" fromTop="14" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="3363" fromTop="47" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="48" fromTop="2" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="1900" fromTop="35" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="0" fromTop="0" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="3235" fromTop="30" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="3356" fromTop="35" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1915" fromTop="22" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="1351" fromTop="30" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="604" fromTop="27" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -39,4 +58,51 @@
     </NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="return" priority="1" />
+      <Item value="GameState`0" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="Debug`0" priority="0" />
+      <Item value="exception" priority="0" />
+      <Item value="public" priority="0" />
+      <Item value="Game`0" priority="1" />
+      <Item value="stateStrategy" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="eventCode" priority="0" />
+      <Item value="photonEvent" priority="0" />
+      <Item value="gameLogic" priority="0" />
+      <Item value="operationCode" priority="0" />
+      <Item value="new" priority="0" />
+      <Item value="Hashtable" priority="0" />
+      <Item value="false" priority="0" />
+      <Item value="_stateStrategy" priority="0" />
+      <Item value="WaitingForConnect`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@GameState">
+      <Item value="WorldEntered" priority="0" />
+      <Item value="WaitingForConnect" priority="0" />
+      <Item value="CharacterSelect" priority="0" />
+      <Item value="CharacterCreate" priority="0" />
+      <Item value="Disconnected" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@UnityEngine.Debug">
+      <Item value="Log`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IGameState">
+      <Item value="OnEventReceive`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Game">
+      <Item value="Peer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ExitGames.Client.Photon.PhotonPeer">
+      <Item value="Service`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@WaitingForConnect">
+      <Item value="Instance" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>

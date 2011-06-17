@@ -50,8 +50,20 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\_GameState\CharacterCreate.cs" />
+     <Compile Include="Assets\_Scripts\_GameState\CharacterSelect.cs" />
+     <Compile Include="Assets\_Scripts\_GameState\Connected.cs" />
+     <Compile Include="Assets\_Scripts\_GameState\Disconnected.cs" />
+     <Compile Include="Assets\_Scripts\_GameState\IGameState.cs" />
+     <Compile Include="Assets\_Scripts\_GameState\WaitingForConnect.cs" />
+     <Compile Include="Assets\_Scripts\_GameState\WorldEntered.cs" />
      <Compile Include="Assets\_Scripts\Game.cs" />
+     <Compile Include="Assets\_Scripts\GameState.cs" />
+     <Compile Include="Assets\_Scripts\IGameListener.cs" />
      <Compile Include="Assets\_Scripts\Login.cs" />
+ <Reference Include="AegisBornCommon">
+ <HintPath>Assets\Plugins\AegisBornCommon.dll</HintPath>
+ </Reference>
  <Reference Include="PhotonUnity3D">
  <HintPath>Assets\Plugins\PhotonUnity3D.dll</HintPath>
  </Reference>

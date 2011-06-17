@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 using System;
 using ExitGames.Client.Photon;
+using AegisBornCommon;
 
-public class Login : MonoBehaviour
+public class Login : MonoBehaviour, IGameListener
 {
 
     Game _engine;
@@ -11,7 +13,7 @@ public class Login : MonoBehaviour
     void Start()
     {
         Application.runInBackground = true;
-        _engine = new Game();
+        _engine = new Game(this);
 
 
     }
@@ -54,8 +56,50 @@ public class Login : MonoBehaviour
             }
             if (GUI.Button(new Rect(200, 60, 100, 30), "Send Operation"))
             {
-                _engine.SendOp();
+                _engine.SendOp((OperationCode)100, new Hashtable(), false, 0);
             }
-        GUI.Label(new Rect(100, 100, 300, 300), _engine.Status);
+        GUI.Label(new Rect(100, 100, 300, 300), _engine.);
     }
+
+    #region Inherited Interfaces
+
+    #region IGameListener
+    public bool IsDebugLogEnabled
+    {
+        get { return true; }
+    }
+
+    public void LogDebug(Game game, string message)
+    {
+        Debug.Log(message);
+    }
+
+    public void LogError(Game game, string message)
+    {
+        Debug.Log(message);
+    }
+
+    public void LogError(Game game, Exception exception)
+    {
+        Debug.Log(exception.ToString());
+    }
+
+    public void LogInfo(Game game, string message)
+    {
+        Debug.Log(message);
+    }
+
+    public void OnConnect(Game game)
+    {
+        Debug.Log("connected");
+    }
+
+    public void OnDisconnect(Game game, StatusCode returnCode)
+    {
+        Debug.Log("disconnected");
+    }
+
+    #endregion
+
+    #endregion
 }

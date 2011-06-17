@@ -1,5 +1,4 @@
 <Modules>
   <Module PersistentId="8D3E5801-A9CD-295E-4C38-021573A6970C" ModuleId="AegisBorn3dPhoton" />
-  <Module PersistentId="UnityEngine, Version=0.0.0.0, Culture=neutral" ModuleId="UnityEngine" />
-  <Module PersistentId="F48E6328-4E73-4484-987E-B796552E45AE" ModuleId="AegisBorn3dCommon" />
+  <Module PersistentId="d:Miscellaneous Files" ModuleId="UnityEngine" />
 </Modules>
