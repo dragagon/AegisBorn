@@ -1,13 +1,14 @@
 ﻿using AegisBornCommon;
+using ExitGames.Client.Photon;
 
 public class Connected : IGameState
 {
 
-    public static readonly IGameState Instance = new Disconnected();
+    public static readonly IGameState Instance = new Connected();
 
     public GameState State
     {
-        get { return GameState.Disconnected; }
+        get { return GameState.Connected; }
     }
 
     public void OnEventReceive(Game gameLogic, AegisBornCommon.EventCode eventCode, System.Collections.Hashtable eventData)
@@ -22,16 +23,33 @@ public class Connected : IGameState
 
     public void OnPeerStatusCallback(Game gameLogic, ExitGames.Client.Photon.StatusCode returnCode)
     {
-        gameLogic.OnUnexpectedPhotonReturn((int)returnCode, OperationCode.Nil, null);
+        switch (returnCode)
+        {
+            case StatusCode.Disconnect:
+            case StatusCode.DisconnectByServer:
+            case StatusCode.DisconnectByServerLogic:
+            case StatusCode.DisconnectByServerUserLimit:
+            case StatusCode.TimeoutDisconnect:
+                {
+                    gameLogic.SetDisconnected(returnCode);
+                    break;
+                }
+
+            default:
+                {
+                    gameLogic.OnUnexpectedPhotonReturn((int)returnCode, OperationCode.Nil, null);
+                    break;
+                }
+        }
     }
 
     public void OnUpdate(Game gameLogic)
     {
-        // Do nothing on updates because we are disconnected.
+        gameLogic.Peer.Service();
     }
 
     public void SendOperation(Game gameLogic, AegisBornCommon.OperationCode operationCode, System.Collections.Hashtable parameter, bool sendReliable, byte channelId)
     {
-        // Do not send operations because we are disconnected.
+        gameLogic.Peer.OpCustom((byte)operationCode, parameter, sendReliable, channelId);
     }
 }

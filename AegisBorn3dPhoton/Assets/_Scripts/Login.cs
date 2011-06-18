@@ -58,7 +58,7 @@ public class Login : MonoBehaviour, IGameListener
             {
                 _engine.SendOp((OperationCode)100, new Hashtable(), false, 0);
             }
-        GUI.Label(new Rect(100, 100, 300, 300), _engine.);
+        GUI.Label(new Rect(100, 100, 300, 300), _engine.State.ToString());
     }
 
     #region Inherited Interfaces

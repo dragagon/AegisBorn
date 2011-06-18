@@ -2,6 +2,7 @@
 {
     Disconnected,
     WaitingForConnect,
+    Connected,
     CharacterSelect,
     CharacterCreate,
     WorldEntered
