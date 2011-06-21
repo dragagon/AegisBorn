@@ -61,6 +61,7 @@
      <Compile Include="Assets\_Scripts\GameState.cs" />
      <Compile Include="Assets\_Scripts\IGameListener.cs" />
      <Compile Include="Assets\_Scripts\Login.cs" />
+     <Compile Include="Assets\_Scripts\MMOEngine.cs" />
  <Reference Include="AegisBornCommon">
  <HintPath>Assets\Plugins\AegisBornCommon.dll</HintPath>
  </Reference>

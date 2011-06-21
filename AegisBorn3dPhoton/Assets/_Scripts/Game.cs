@@ -5,11 +5,14 @@ using System.Collections;
 
 public class Game : IPhotonPeerListener
 {
+
+    private readonly Game _instance;
+
     private PhotonPeer _peer;
 
     public string Status = "disconnected";
 
-    private readonly IGameListener _listener;
+    private IGameListener _listener;
 
     private IGameState _stateStrategy;
 
@@ -17,6 +20,12 @@ public class Game : IPhotonPeerListener
     {
         _listener = listener;
         _stateStrategy = Disconnected.Instance;
+        _instance = this;
+    }
+
+    public Game Instance
+    {
+        get { return _instance; }
     }
 
     public PhotonPeer Peer
@@ -30,6 +39,12 @@ public class Game : IPhotonPeerListener
         {
             return _stateStrategy.State;
         }
+    }
+
+    public IGameListener Listener
+    {
+        get { return _listener; }
+        set { _listener = value; }
     }
 
     #region Inherited Interfaces
