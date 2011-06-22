@@ -57,6 +57,7 @@
      <Compile Include="Assets\_Scripts\_GameState\IGameState.cs" />
      <Compile Include="Assets\_Scripts\_GameState\WaitingForConnect.cs" />
      <Compile Include="Assets\_Scripts\_GameState\WorldEntered.cs" />
+     <Compile Include="Assets\_Scripts\_Operations\LoginOperations.cs" />
      <Compile Include="Assets\_Scripts\Game.cs" />
      <Compile Include="Assets\_Scripts\GameState.cs" />
      <Compile Include="Assets\_Scripts\IGameListener.cs" />

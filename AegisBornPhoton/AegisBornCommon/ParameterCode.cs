@@ -11,5 +11,15 @@
         /// The debug message.
         /// </summary>
         DebugMessage = 1,
+
+        /// <summary>
+        /// The player's username
+        /// </summary>
+        UserName = 10,
+
+        /// <summary>
+        /// The player's password
+        /// </summary>
+        Password = 11,
     }
 }

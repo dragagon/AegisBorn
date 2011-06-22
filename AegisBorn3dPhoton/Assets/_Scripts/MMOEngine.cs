@@ -16,6 +16,7 @@ public class MMOEngine : MonoBehaviour, IGameListener
     {
         Application.runInBackground = true;
         _engine = new Game(this);
+        DontDestroyOnLoad(this);
     }
 
     // Update is called once per frame

@@ -3,12 +3,12 @@ using Photon.SocketServer.Rpc;
 using System.Collections.Generic;
 using Photon.SocketServer.Rpc.Reflection;
 using System;
+using Photon.SocketServer.Security;
 
 namespace AegisBorn
 {
     class AegisBornPeer : Peer, IOperationHandler
     {
-
         private static readonly OperationMethodInfoCache Operations = new OperationMethodInfoCache();
 
         private readonly OperationDispatcher _dispatcher;
@@ -16,7 +16,6 @@ namespace AegisBorn
         static AegisBornPeer()
         {
             Operations = new OperationMethodInfoCache();
-
             try
             {
                 Operations.RegisterOperations(typeof(AegisBornPeer));
@@ -53,6 +52,18 @@ namespace AegisBorn
                 return result;
             }
             return new OperationResponse(operationRequest, 0, "Ok", new Dictionary<short, object> { { 100, "We get signal." } });
+        }
+
+        [Operation(OperationCode = (byte)95)]
+        public OperationResponse OperationKeyExchange(Peer peer, OperationRequest request)
+        {
+            foreach(KeyValuePair<short, object> pair in request.Params)
+            {
+                if (pair.Value is byte[])
+                {
+                    peer.PhotonPeer.InitializeEncryption((byte[])pair.Value);
+                }
+            }
         }
     }
 }

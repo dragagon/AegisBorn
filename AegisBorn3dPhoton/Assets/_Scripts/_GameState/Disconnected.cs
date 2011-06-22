@@ -30,7 +30,7 @@ public class Disconnected : IGameState
         // Do nothing on updates because we are disconnected.
     }
 
-    public void SendOperation(Game gameLogic, AegisBornCommon.OperationCode operationCode, System.Collections.Hashtable parameter, bool sendReliable, byte channelId)
+    public void SendOperation(Game gameLogic, AegisBornCommon.OperationCode operationCode, System.Collections.Hashtable parameter, bool sendReliable, byte channelId, bool encrypt)
     {
         // Do not send operations because we are disconnected.
     }

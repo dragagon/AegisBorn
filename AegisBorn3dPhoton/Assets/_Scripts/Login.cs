@@ -7,23 +7,44 @@ public class Login : MonoBehaviour
 {
     private Game _engine;
 
-    public void Start()
+    void Start()
     {
         _engine = MMOEngine.Engine;
     }
 
-    public void OnGUI()
+    private string _username = "";
+    private string _password = "";
+    private bool _loginSent = false;
+
+    void OnGUI()
     {
-        if (GUI.Button(new Rect(100, 60, 100, 30), "Connect"))
+
+        GUI.Label(new Rect(10, 116, 100, 100), "Userame: ");
+        _username = GUI.TextField(new Rect(100, 116, 200, 20), _username, 25);
+        GUI.Label(new Rect(10, 141, 100, 100), "Password: ");
+        _password = GUI.PasswordField(new Rect(100, 141, 200, 20), _password, '*', 25);
+
+        GUI.Label(new Rect(10, 225, 400, 100), _engine.State.ToString());
+
+        if (GUI.Button(new Rect(100, 165, 100, 25), "Login") || (Event.current.type == EventType.keyDown && Event.current.character == '\n'))
         {
             var peer = new PhotonPeer(_engine, false);
 
             _engine.Initialize(peer, "localhost:5055", "AegisBorn");
         }
-        if (GUI.Button(new Rect(200, 60, 100, 30), "Send Operation"))
+        if (GUI.Button(new Rect(100, 195, 100, 25), "Logout"))
         {
-            _engine.SendOp((OperationCode)100, new Hashtable(), false, 0);
+            _engine.SetDisconnected(0);
+            _loginSent = false;
         }
-        GUI.Label(new Rect(100, 100, 300, 300), _engine.State.ToString());
+    }
+
+    void FixedUpdate()
+    {
+        if(_engine.State == GameState.Connected && !_loginSent)
+        {
+            LoginOperations.Login(_engine, _username, _password);
+            _loginSent = true;
+        }
     }
 }

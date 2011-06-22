@@ -14,5 +14,5 @@ public interface IGameState
 
     void OnUpdate(Game gameLogic);
 
-    void SendOperation(Game gameLogic, OperationCode operationCode, Hashtable parameter, bool sendReliable, byte channelId);
+    void SendOperation(Game gameLogic, OperationCode operationCode, Hashtable parameter, bool sendReliable, byte channelId, bool encrypt);
 }

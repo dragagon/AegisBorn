@@ -27,7 +27,7 @@ public class CharacterCreate : IGameState
         throw new NotImplementedException();
     }
 
-    public void SendOperation(Game gameLogic, AegisBornCommon.OperationCode operationCode, System.Collections.Hashtable parameter, bool sendReliable, byte channelId)
+    public void SendOperation(Game gameLogic, AegisBornCommon.OperationCode operationCode, System.Collections.Hashtable parameter, bool sendReliable, byte channelId, bool encrypt)
     {
         throw new NotImplementedException();
     }

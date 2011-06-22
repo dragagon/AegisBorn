@@ -41,12 +41,6 @@ public class Game : IPhotonPeerListener
         }
     }
 
-    public IGameListener Listener
-    {
-        get { return _listener; }
-        set { _listener = value; }
-    }
-
     #region Inherited Interfaces
 
     #region IPhotonPeerListener
@@ -109,26 +103,27 @@ public class Game : IPhotonPeerListener
         _stateStrategy.OnUpdate(this);
     }
 
-    public void SendOp(OperationCode operationCode, Hashtable parameter, bool sendReliable, byte channelId)
+    public void SendOp(OperationCode operationCode, Hashtable parameter, bool sendReliable, byte channelId, bool encrypt)
     {
-        _stateStrategy.SendOperation(this, operationCode, parameter, sendReliable, channelId);
+        _stateStrategy.SendOperation(this, operationCode, parameter, sendReliable, channelId, encrypt);
     }
 
     #region error handling
 
     public void OnUnexpectedEventReceive(EventCode eventCode, Hashtable eventData)
     {
-        this._listener.LogError(this, string.Format("unexpected event {0}", eventCode));
+        _listener.LogError(this, string.Format("unexpected event {0}", eventCode));
     }
 
     public void OnUnexpectedOperationError(OperationCode operationCode, ErrorCode errorCode, string debugMessage, Hashtable hashtable)
     {
-        this._listener.LogError(this, string.Format("unexpected operation error {0} from operation {1} in state {2}", errorCode, operationCode, this._stateStrategy.State));
+        _listener.LogError(this, string.Format("unexpected operation error {0} from operation {1} in state {2}", errorCode, operationCode, _stateStrategy.State));
     }
 
     public void OnUnexpectedPhotonReturn(int photonReturnCode, OperationCode operationCode, Hashtable hashtable)
     {
-        this._listener.LogError(this, string.Format("unexpected return {0}", photonReturnCode));
+
+        _listener.LogError(this, string.Format("opcode: {1} - unexpected return {0}", photonReturnCode, operationCode));
     }
 
     #endregion
@@ -136,11 +131,14 @@ public class Game : IPhotonPeerListener
     public void SetConnected()
     {
         _stateStrategy = Connected.Instance;
+        _listener.OnConnect(this);
+        _peer.OpExchangeKeysForEncryption();
     }
 
     public void SetDisconnected(StatusCode returnCode)
     {
         _stateStrategy = Disconnected.Instance;
+        _listener.OnDisconnect(this, 0);
     }
 
 }
