@@ -1,0 +1,44 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="IMessageHandler`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IMessageHandler">
+      <Item value="HandleMessage`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Common/f:EncryptionProvider.cs" caret="915" fromTop="19" />
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Handlers/f:CharacterCreateHandler.cs" caret="0" fromTop="0" />
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Common/f:IMessageHandler.cs" caret="0" fromTop="0" />
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_GUI/f:CharacterSelectGUI.cs" caret="1107" fromTop="35" />
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Common/f:ConnectionHandler.cs" caret="2081" fromTop="26" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Common/f:ConnectionHandler.cs" caret="513" fromTop="16" />
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Common/f:ConnectionHandler.cs" caret="666" fromTop="22" />
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Common/f:ConnectionHandler.cs" caret="1939" fromTop="27" />
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Common/f:ConnectionHandler.cs" caret="2062" fromTop="31" />
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_GUI/f:CharacterSelectGUI.cs" caret="1107" fromTop="35" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

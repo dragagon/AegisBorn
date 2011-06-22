@@ -1,4 +1,6 @@
-﻿using AegisBornCommon;
+﻿using System.Collections;
+using System.Collections.Generic;
+using AegisBornCommon;
 using ExitGames.Client.Photon;
 
 public class Connected : IGameState
@@ -6,22 +8,45 @@ public class Connected : IGameState
 
     public static readonly IGameState Instance = new Connected();
 
+    private readonly Dictionary<OperationCode, IOperationHandler> _handlers;
+    public Dictionary<OperationCode, IOperationHandler> Handlers
+    {
+        get { return _handlers; }
+    }
+
     public GameState State
     {
         get { return GameState.Connected; }
     }
 
-    public void OnEventReceive(Game gameLogic, AegisBornCommon.EventCode eventCode, System.Collections.Hashtable eventData)
+    public Connected()
+    {
+        _handlers = new Dictionary<OperationCode, IOperationHandler>();
+        // Add handlers here
+        var keyHandler = new ExchangeKeysHandler();
+        _handlers.Add(OperationCode.ExchangeKeysForEncryption, keyHandler);
+    }
+
+    public void OnEventReceive(Game gameLogic, EventCode eventCode, Hashtable eventData)
     {
         gameLogic.OnUnexpectedEventReceive(eventCode, eventData);
     }
 
-    public void OnOperationReturn(Game gameLogic, AegisBornCommon.OperationCode operationCode, int returnCode, System.Collections.Hashtable returnValues)
+    public void OnOperationReturn(Game gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues)
     {
-        gameLogic.OnUnexpectedPhotonReturn(returnCode, operationCode, returnValues);
+        IOperationHandler handler;
+
+        if (_handlers.TryGetValue(operationCode, out handler))
+        {
+            handler.HandleMessage(gameLogic, operationCode, returnCode, returnValues);
+        }
+        else
+        {
+            gameLogic.OnUnexpectedPhotonReturn(returnCode, operationCode, returnValues);
+        }
     }
 
-    public void OnPeerStatusCallback(Game gameLogic, ExitGames.Client.Photon.StatusCode returnCode)
+    public void OnPeerStatusCallback(Game gameLogic, StatusCode returnCode)
     {
         switch (returnCode)
         {
@@ -48,8 +73,9 @@ public class Connected : IGameState
         gameLogic.Peer.Service();
     }
 
-    public void SendOperation(Game gameLogic, AegisBornCommon.OperationCode operationCode, System.Collections.Hashtable parameter, bool sendReliable, byte channelId, bool encrypt)
+    public void SendOperation(Game gameLogic, OperationCode operationCode, Hashtable parameter, bool sendReliable, byte channelId, bool encrypt)
     {
-        gameLogic.Peer.OpCustom((byte)operationCode, parameter, sendReliable, channelId, false);
+        gameLogic.Peer.OpCustom((byte)operationCode, parameter, sendReliable, channelId, encrypt);
     }
+
 }

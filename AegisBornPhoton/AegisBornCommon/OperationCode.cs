@@ -11,5 +11,10 @@
         /// Login to the server
         /// </summary>
         Login = 10,
+
+        /// <summary>
+        /// Code for exchanging keys using PhotonPeer.OpExchangeKeysForEncryption
+        /// </summary>
+        ExchangeKeysForEncryption = 95,
     }
 }

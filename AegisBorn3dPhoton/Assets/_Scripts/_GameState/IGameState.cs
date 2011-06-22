@@ -1,9 +1,13 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using AegisBornCommon;
 using ExitGames.Client.Photon;
 
 public interface IGameState
 {
+
+    Dictionary<OperationCode, IOperationHandler> Handlers { get; }
+
     GameState State { get; }
 
     void OnEventReceive(Game gameLogic, EventCode eventCode, Hashtable eventData);

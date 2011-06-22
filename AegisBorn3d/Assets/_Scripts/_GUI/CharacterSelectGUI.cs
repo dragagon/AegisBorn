@@ -31,9 +31,9 @@ public class CharacterSelectGUI : ConnectionHandler {
 	        smartFox.AddLogListener(LogLevel.DEBUG, OnDebugMessage);
 				
 			// Personal message handlers
-            handlers.Add("characterlist", CharacterList.HandleMessage);
-            handlers.Add("characterSelected", CharacterSelected.HandleMessage);
-            handlers.Add("error", errorHandler.HandleMessage);
+            handlers.Add("characterlist", CharacterList);
+            handlers.Add("characterSelected", CharacterSelected);
+            handlers.Add("error", errorHandler);
 
             CharacterList.afterMessageRecieved += AfterCharacterList;
             CharacterSelected.afterMessageRecieved += AfterCharacterSelected;

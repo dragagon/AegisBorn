@@ -15,15 +15,15 @@ public class ConnectionHandler : MonoBehaviour
     public string registerZone = "register";
     public bool debug = true;
 
-    protected delegate void ExtensionHandler(ISFSObject data);
+    //protected delegate void ExtensionHandler(ISFSObject data);
 
-    protected Dictionary<string, ExtensionHandler> handlers;
+    protected Dictionary<string, IMessageHandler> handlers;
 
     protected EncryptionProvider provider;
 
     protected void Awake()
     {
-        handlers = new Dictionary<string, ExtensionHandler>();
+        handlers = new Dictionary<string, IMessageHandler>();
         Application.runInBackground = true;
 
         if (SmartFoxConnection.IsInitialized)
@@ -70,11 +70,11 @@ public class ConnectionHandler : MonoBehaviour
             string cmd = (string)evt.Params["cmd"];
             ISFSObject dt = (SFSObject)evt.Params["params"];
 
-            ExtensionHandler handler;
+            IMessageHandler handler;
 
             if (handlers.TryGetValue(cmd, out handler))
             {
-                handler(dt);
+                handler.HandleMessage(dt);
             }
             else
             {

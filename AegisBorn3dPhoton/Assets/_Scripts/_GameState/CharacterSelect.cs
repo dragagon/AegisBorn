@@ -1,10 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using AegisBornCommon;
 
 public class CharacterSelect : IGameState
 {
     public GameState State
     {
         get { return GameState.CharacterSelect; }
+    }
+
+    public Dictionary<OperationCode, IOperationHandler> Handlers
+    {
+        get { throw new NotImplementedException(); }
     }
 
     public void OnEventReceive(Game gameLogic, AegisBornCommon.EventCode eventCode, System.Collections.Hashtable eventData)

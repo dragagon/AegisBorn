@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="AegisBornApplication.cs" />
     <Compile Include="AegisBornPeer.cs" />
+    <Compile Include="Operations\EstablishSecureCommunicationOperation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

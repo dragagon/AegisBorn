@@ -16,6 +16,10 @@ public class Game : IPhotonPeerListener
 
     private IGameState _stateStrategy;
 
+
+    public delegate void AfterKeysExchanged();
+    public AfterKeysExchanged afterKeysExchanged;
+
     public Game(IGameListener listener)
     {
         _listener = listener;
@@ -95,7 +99,10 @@ public class Game : IPhotonPeerListener
 
     public void Disconnect()
     {
-        Peer.Disconnect();
+        if (Peer != null)
+        {
+            Peer.Disconnect();
+        }
     }
 
     public void Update()
@@ -133,6 +140,15 @@ public class Game : IPhotonPeerListener
         _stateStrategy = Connected.Instance;
         _listener.OnConnect(this);
         _peer.OpExchangeKeysForEncryption();
+    }
+
+    public void NotifyKeysExchanged()
+    {
+        if (afterKeysExchanged != null)
+        {
+            afterKeysExchanged();
+        }
+        _listener.LogInfo(this, "Keys successfully exchanged");
     }
 
     public void SetDisconnected(StatusCode returnCode)

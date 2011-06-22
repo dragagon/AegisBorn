@@ -8,44 +8,31 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Disconnected.cs" caret="698" fromTop="21" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="950" fromTop="28" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1838" fromTop="34" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:GameState.cs" caret="83" fromTop="4" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="626" fromTop="13" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="1357" fromTop="18" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_Handlers/d:Operations/f:IOperationHandler.cs" caret="632" fromTop="18" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="1226" fromTop="22" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_Operations/f:LoginOperations.cs" caret="498" fromTop="14" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="775" fromTop="15" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_Handlers/d:Operations/f:ExchangeKeysHandler.cs" caret="378" fromTop="8" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="885" fromTop="1" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:MMOEngine.cs" caret="1252" fromTop="19" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="169" fromTop="8" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="1715" fromTop="29" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="745" fromTop="21" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="1624" fromTop="47" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="981" fromTop="22" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="1346" fromTop="32" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="1496" fromTop="38" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="716" fromTop="26" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1738" fromTop="30" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1491" fromTop="13" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="853" fromTop="22" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="308" fromTop="10" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="370" fromTop="14" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="3363" fromTop="47" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="1900" fromTop="35" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:WaitingForConnect.cs" caret="0" fromTop="0" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="3235" fromTop="30" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="3356" fromTop="35" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="1915" fromTop="22" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="604" fromTop="27" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="154" fromTop="5" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="236" fromTop="9" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:GameState.cs" caret="83" fromTop="4" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="1522" fromTop="20" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="1740" fromTop="25" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="1447" fromTop="31" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="1169" fromTop="21" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="1319" fromTop="27" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="893" fromTop="15" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="1357" fromTop="18" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="775" fromTop="15" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="515" fromTop="15" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:Connected.cs" caret="702" fromTop="20" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="3956" fromTop="21" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="3538" fromTop="9" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="4030" fromTop="23" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="1312" fromTop="20" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="291" fromTop="12" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="448" fromTop="16" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="448" fromTop="15" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_Operations/f:LoginOperations.cs" caret="498" fromTop="14" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="375" fromTop="17" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Login.cs" caret="1186" fromTop="37" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_Handlers/d:Operations/f:ExchangeKeysHandler.cs" caret="378" fromTop="8" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="3857" fromTop="27" />
+      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/f:Game.cs" caret="2337" fromTop="16" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -61,24 +48,62 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="return" priority="1" />
+      <Item value="return" priority="5" />
       <Item value="GameState`0" priority="0" />
-      <Item value="true" priority="0" />
+      <Item value="true" priority="2" />
       <Item value="Debug`0" priority="0" />
       <Item value="exception" priority="0" />
-      <Item value="public" priority="0" />
-      <Item value="Game`0" priority="1" />
+      <Item value="public" priority="12" />
+      <Item value="Game`0" priority="7" />
       <Item value="stateStrategy" priority="0" />
-      <Item value="this" priority="0" />
+      <Item value="this" priority="4" />
       <Item value="eventCode" priority="0" />
       <Item value="photonEvent" priority="0" />
-      <Item value="gameLogic" priority="0" />
-      <Item value="operationCode" priority="0" />
-      <Item value="new" priority="0" />
+      <Item value="gameLogic" priority="3" />
+      <Item value="operationCode" priority="1" />
+      <Item value="new" priority="3" />
       <Item value="Hashtable" priority="0" />
-      <Item value="false" priority="0" />
-      <Item value="_stateStrategy" priority="0" />
+      <Item value="false" priority="2" />
+      <Item value="_stateStrategy" priority="2" />
       <Item value="WaitingForConnect`0" priority="0" />
+      <Item value="private" priority="1" />
+      <Item value="_instance" priority="1" />
+      <Item value="IGameListener`0" priority="1" />
+      <Item value="_listener" priority="2" />
+      <Item value="value" priority="0" />
+      <Item value="MonoBehaviour`0" priority="0" />
+      <Item value="void" priority="5" />
+      <Item value="GameObject`0" priority="1" />
+      <Item value="_engine" priority="4" />
+      <Item value="MMOEngine`0" priority="3" />
+      <Item value="FindObjectOfType`0" priority="0" />
+      <Item value="typeof" priority="0" />
+      <Item value="GetComponent`0" priority="0" />
+      <Item value="var" priority="0" />
+      <Item value="if" priority="1" />
+      <Item value="handled" priority="1" />
+      <Item value="switch" priority="0" />
+      <Item value="case" priority="0" />
+      <Item value="OperationCode`0" priority="3" />
+      <Item value="break" priority="0" />
+      <Item value="int" priority="0" />
+      <Item value="DictionaryBase`0" priority="0" />
+      <Item value="IOperationHandler`0" priority="4" />
+      <Item value="_handlers" priority="2" />
+      <Item value="Connected`0" priority="0" />
+      <Item value="Dictionary&lt;OperationCode,IOperationHandler&gt;" priority="0" />
+      <Item value="LiteOpCode`0" priority="0" />
+      <Item value="ExchangeKeysHandler`0" priority="1" />
+      <Item value="keyHandler" priority="0" />
+      <Item value="AfterMessageRecieved" priority="0" />
+      <Item value="AfterKeyExchange`0" priority="0" />
+      <Item value="bool" priority="0" />
+      <Item value="KeysExchanged" priority="0" />
+      <Item value="IGameState`0" priority="0" />
+      <Item value="state" priority="0" />
+      <Item value="afterKeysExchanged" priority="1" />
+      <Item value="Peer" priority="0" />
+      <Item value="null" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@GameState">
       <Item value="WorldEntered" priority="0" />
@@ -97,17 +122,39 @@
       <Item value="OnEventReceive`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Game">
-      <Item value="Peer" priority="0" />
+      <Item value="Peer" priority="2" />
       <Item value="Status" priority="0" />
+      <Item value="SetKeysExchanged`0" priority="0" />
+      <Item value="NotifyKeysExchanged`0" priority="0" />
+      <Item value="afterKeysExchanged" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:ExitGames.Client.Photon.PhotonPeer">
       <Item value="Service`0" priority="0" />
+      <Item value="DeriveSharedKey`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@WaitingForConnect">
       <Item value="Instance" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
       <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MMOEngine">
+      <Item value="Engine" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MMOEngine">
+      <Item value="Engine" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ExitGames.Client.Photon.LiteOpCode">
+      <Item value="ExchangeKeysForEncryption" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ExchangeKeysHandler">
+      <Item value="afterMessageRecieved" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IGameListener">
+      <Item value="LogInfo`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

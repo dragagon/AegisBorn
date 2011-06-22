@@ -1,4 +1,5 @@
-﻿using Photon.SocketServer;
+﻿using AegisBornCommon;
+using Photon.SocketServer;
 using Photon.SocketServer.Rpc;
 using System.Collections.Generic;
 using Photon.SocketServer.Rpc.Reflection;
@@ -54,16 +55,20 @@ namespace AegisBorn
             return new OperationResponse(operationRequest, 0, "Ok", new Dictionary<short, object> { { 100, "We get signal." } });
         }
 
-        [Operation(OperationCode = (byte)95)]
+        [Operation(OperationCode = (byte)OperationCode.ExchangeKeysForEncryption)]
         public OperationResponse OperationKeyExchange(Peer peer, OperationRequest request)
         {
-            foreach(KeyValuePair<short, object> pair in request.Params)
+            var operation = new EstablishSecureCommunicationOperation(request);
+            if (operation.IsValid == false)
             {
-                if (pair.Value is byte[])
-                {
-                    peer.PhotonPeer.InitializeEncryption((byte[])pair.Value);
-                }
+                return new OperationResponse(request, (int)ErrorCode.InvalidOperationParameter, operation.GetErrorMessage());
             }
+
+            // initialize the peer to support encrytion
+            operation.ServerKey = peer.PhotonPeer.InitializeEncryption(operation.ClientKey);
+
+            // publish the servers public key to the client
+            return operation.GetOperationResponse(0, "OK");
         }
     }
 }

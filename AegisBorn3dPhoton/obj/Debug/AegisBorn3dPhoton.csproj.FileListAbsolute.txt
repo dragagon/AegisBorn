@@ -34,3 +34,5 @@ D:\development\AegisBorn3dPhoton\Temp\bin\Debug\Boo.Lang.Parser.dll
 D:\development\AegisBorn3dPhoton\Temp\bin\Debug\Boo.Lang.Useful.dll
 D:\development\AegisBorn3dPhoton\Temp\bin\Debug\Mono.Security.dll
 D:\development\AegisBorn3dPhoton\Temp\bin\Debug\AegisBornCommon.pdb
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\AegisBornCommon.dll
+C:\development\AegisBorn3dPhoton\Temp\bin\Debug\AegisBornCommon.pdb

@@ -1,82 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-	<ProductVersion>10.0.20506</ProductVersion>
-	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638}</ProjectGuid>
-	<OutputType>Library</OutputType>
-	<AppDesignerFolder>Properties</AppDesignerFolder>
-	<RootNamespace>Irrelevant</RootNamespace>
-	<AssemblyName>Irrelvant</AssemblyName>
-	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-	<FileAlignment>512</FileAlignment>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Irrelevant</RootNamespace>
+    <AssemblyName>Irrelvant</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-	<DebugSymbols>true</DebugSymbols>
-	<DebugType>full</DebugType>
-	<Optimize>false</Optimize>
-	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_3_3_0;UNITY_3_3;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_3_3_0;UNITY_3_3;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-	<DebugType>pdbonly</DebugType>
-	<Optimize>true</Optimize>
-	<OutputPath>Temp\bin\Release\</OutputPath>
-	<DefineConstants>TRACE</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-	<Reference Include="System" />
+    <Reference Include="System" />
     <Reference Include="System.XML" />
-	<Reference Include="System.Core" />
-	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-	</Reference>
-	<Reference Include="Boo.Lang">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Mono/lib/mono/unity/Boo.Lang.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityScript">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Mono/lib/mono/unity/UnityScript.dll</HintPath>
-	</Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Mono/lib/mono/unity/Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript">
+      <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Mono/lib/mono/unity/UnityScript.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\_Common\ConnectionHandler.cs" />
-     <Compile Include="Assets\_Scripts\_Common\EncryptionProvider.cs" />
-     <Compile Include="Assets\_Scripts\_Common\IMessageHandler.cs" />
-     <Compile Include="Assets\_Scripts\_Common\SmartFoxConnection.cs" />
-     <Compile Include="Assets\_Scripts\_GUI\CharacterCreateGUI.cs" />
-     <Compile Include="Assets\_Scripts\_GUI\CharacterSelectGUI.cs" />
-     <Compile Include="Assets\_Scripts\_GUI\LobbyGUI.cs" />
-     <Compile Include="Assets\_Scripts\_Handlers\CharacterCreateHandler.cs" />
-     <Compile Include="Assets\_Scripts\_Handlers\CharacterListHandler.cs" />
-     <Compile Include="Assets\_Scripts\_Handlers\CharacterSelectedHandler.cs" />
-     <Compile Include="Assets\_Scripts\_Handlers\ErrorHandler.cs" />
-     <Compile Include="Assets\_Scripts\_Handlers\ServerPublicKeyHandler.cs" />
-     <Compile Include="Assets\_Scripts\_Messages\CreateCharacterMessage.cs" />
-     <Compile Include="Assets\_Scripts\_Messages\GetCharactersMessage.cs" />
-     <Compile Include="Assets\_Scripts\_Messages\LoginMessage.cs" />
-     <Compile Include="Assets\_Scripts\_Messages\PublicKeyMessage.cs" />
-     <Compile Include="Assets\_Scripts\_Messages\SelectCharacterMessage.cs" />
-     <Compile Include="Assets\_Scripts\_Models\Cryptography\ClientPublicKey.cs" />
-     <Compile Include="Assets\_Scripts\_Models\Cryptography\ServerPublicKey.cs" />
-     <Compile Include="Assets\_Scripts\_Models\Entity\Character.cs" />
-     <Compile Include="Assets\_Scripts\_Models\IReceivableObject.cs" />
-     <Compile Include="Assets\_Scripts\_Models\ISendableObject.cs" />
-     <Compile Include="Assets\_Scripts\_Models\ReceivableObject.cs" />
-     <Compile Include="Assets\_Scripts\_Models\SendableObject.cs" />
- <Reference Include="SmartFox2">
- <HintPath>Assets\Plugins\SmartFox2.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\_Scripts\_Common\ConnectionHandler.cs" />
+    <Compile Include="Assets\_Scripts\_Common\EncryptionProvider.cs" />
+    <Compile Include="Assets\_Scripts\_Common\IMessageHandler.cs" />
+    <Compile Include="Assets\_Scripts\_Common\SmartFoxConnection.cs" />
+    <Compile Include="Assets\_Scripts\_GUI\CharacterCreateGUI.cs" />
+    <Compile Include="Assets\_Scripts\_GUI\CharacterSelectGUI.cs" />
+    <Compile Include="Assets\_Scripts\_GUI\LobbyGUI.cs" />
+    <Compile Include="Assets\_Scripts\_Handlers\CharacterCreateHandler.cs" />
+    <Compile Include="Assets\_Scripts\_Handlers\CharacterListHandler.cs" />
+    <Compile Include="Assets\_Scripts\_Handlers\CharacterSelectedHandler.cs" />
+    <Compile Include="Assets\_Scripts\_Handlers\LoginSuccessHandler.cs" />
+    <Compile Include="Assets\_Scripts\_Handlers\ErrorHandler.cs" />
+    <Compile Include="Assets\_Scripts\_Handlers\ServerPublicKeyHandler.cs" />
+    <Compile Include="Assets\_Scripts\_Messages\CreateCharacterMessage.cs" />
+    <Compile Include="Assets\_Scripts\_Messages\GetCharactersMessage.cs" />
+    <Compile Include="Assets\_Scripts\_Messages\LoginMessage.cs" />
+    <Compile Include="Assets\_Scripts\_Messages\PublicKeyMessage.cs" />
+    <Compile Include="Assets\_Scripts\_Messages\SelectCharacterMessage.cs" />
+    <Compile Include="Assets\_Scripts\_Models\Cryptography\ClientPublicKey.cs" />
+    <Compile Include="Assets\_Scripts\_Models\Cryptography\ServerPublicKey.cs" />
+    <Compile Include="Assets\_Scripts\_Models\Entity\Character.cs" />
+    <Compile Include="Assets\_Scripts\_Models\IReceivableObject.cs" />
+    <Compile Include="Assets\_Scripts\_Models\ISendableObject.cs" />
+    <Compile Include="Assets\_Scripts\_Models\ReceivableObject.cs" />
+    <Compile Include="Assets\_Scripts\_Models\SendableObject.cs" />
+    <Reference Include="SmartFox2">
+      <HintPath>Assets\Plugins\SmartFox2.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -86,6 +87,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>
-	

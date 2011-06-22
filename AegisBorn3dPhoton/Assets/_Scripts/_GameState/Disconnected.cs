@@ -1,4 +1,8 @@
-﻿using AegisBornCommon;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using AegisBornCommon;
+using ExitGames.Client.Photon;
 
 public class Disconnected : IGameState
 {
@@ -10,17 +14,22 @@ public class Disconnected : IGameState
         get { return GameState.Disconnected; }
     }
 
-    public void OnEventReceive(Game gameLogic, AegisBornCommon.EventCode eventCode, System.Collections.Hashtable eventData)
+    public Dictionary<OperationCode, IOperationHandler> Handlers
+    {
+        get { throw new NotImplementedException(); }
+    }
+
+    public void OnEventReceive(Game gameLogic, EventCode eventCode, Hashtable eventData)
     {
         gameLogic.OnUnexpectedEventReceive(eventCode, eventData);
     }
 
-    public void OnOperationReturn(Game gameLogic, AegisBornCommon.OperationCode operationCode, int returnCode, System.Collections.Hashtable returnValues)
+    public void OnOperationReturn(Game gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues)
     {
         gameLogic.OnUnexpectedPhotonReturn(returnCode, operationCode, returnValues);
     }
 
-    public void OnPeerStatusCallback(Game gameLogic, ExitGames.Client.Photon.StatusCode returnCode)
+    public void OnPeerStatusCallback(Game gameLogic, StatusCode returnCode)
     {
         gameLogic.OnUnexpectedPhotonReturn((int)returnCode, OperationCode.Nil, null);
     }
@@ -30,7 +39,7 @@ public class Disconnected : IGameState
         // Do nothing on updates because we are disconnected.
     }
 
-    public void SendOperation(Game gameLogic, AegisBornCommon.OperationCode operationCode, System.Collections.Hashtable parameter, bool sendReliable, byte channelId, bool encrypt)
+    public void SendOperation(Game gameLogic, OperationCode operationCode, Hashtable parameter, bool sendReliable, byte channelId, bool encrypt)
     {
         // Do not send operations because we are disconnected.
     }

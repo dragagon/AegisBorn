@@ -19,6 +19,7 @@ public class LobbyGUI : ConnectionHandler
 	private string lastModMessage = "";
      
     ServerPublicKeyHandler serverPublicKeyHandler;
+    private LoginSuccessHandler loginSuccessHandler;
 
     /************
      * Unity callback methods
@@ -29,6 +30,7 @@ public class LobbyGUI : ConnectionHandler
         base.Awake();
 
         serverPublicKeyHandler = new ServerPublicKeyHandler();
+        loginSuccessHandler = new LoginSuccessHandler();
 
         // Register callback delegate
         smartFox.AddEventListener(SFSEvent.CONNECTION, OnConnection);
@@ -41,9 +43,10 @@ public class LobbyGUI : ConnectionHandler
         smartFox.AddLogListener(LogLevel.DEBUG, OnDebugMessage);
 
         serverPublicKeyHandler.afterMessageRecieved += Login_AfterServerPKRecieved;
+        loginSuccessHandler.afterMessageRecieved += OnLoginSuccess;
 
-        handlers.Add("publickey", serverPublicKeyHandler.HandleMessage);
-		handlers.Add("loginsuccess", OnLoginSuccess);
+        handlers.Add("publickey", serverPublicKeyHandler);
+        handlers.Add("loginsuccess", loginSuccessHandler);
 
 
     }
@@ -146,7 +149,7 @@ public class LobbyGUI : ConnectionHandler
 		}
     }
 	
-	void OnLoginSuccess(ISFSObject data)
+	void OnLoginSuccess()
 	{
 		UnregisterSFSSceneCallbacks();
 		Application.LoadLevel("CharacterSelect");

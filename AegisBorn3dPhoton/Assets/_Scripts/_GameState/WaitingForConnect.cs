@@ -1,4 +1,6 @@
-﻿using AegisBornCommon;
+﻿using System;
+using System.Collections.Generic;
+using AegisBornCommon;
 using ExitGames.Client.Photon;
 
 public class WaitingForConnect : IGameState
@@ -9,6 +11,11 @@ public class WaitingForConnect : IGameState
     public GameState State
     {
         get { return GameState.WaitingForConnect; }
+    }
+
+    public Dictionary<OperationCode, IOperationHandler> Handlers
+    {
+        get { throw new NotImplementedException(); }
     }
 
     public void OnEventReceive(Game gameLogic, AegisBornCommon.EventCode eventCode, System.Collections.Hashtable eventData)

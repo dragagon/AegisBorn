@@ -21,5 +21,16 @@
         /// The player's password
         /// </summary>
         Password = 11,
+
+        /// <summary>
+        /// Client key parameter used to establish secure communication.
+        /// </summary>
+        ClientKey = 16,
+
+        /// <summary>
+        /// Server key parameter used to establish secure communication.
+        /// </summary>
+        ServerKey = 17,
+
     }
 }

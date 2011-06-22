@@ -29,8 +29,8 @@ public class CharacterCreateGUI : ConnectionHandler
             smartFox.AddLogListener(LogLevel.DEBUG, OnDebugMessage);
 
             // Personal message handlers
-            handlers.Add("characterCreated", CharacterCreate.HandleMessage);
-            handlers.Add("error", errorHandler.HandleMessage);
+            handlers.Add("characterCreated", CharacterCreate);
+            handlers.Add("error", errorHandler);
  
             CharacterCreate.afterMessageRecieved += AfterCharacterCreated;
             errorHandler.afterMessageRecieved += AfterErrorReceived;
