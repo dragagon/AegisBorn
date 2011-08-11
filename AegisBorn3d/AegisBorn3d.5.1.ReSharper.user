@@ -19,8 +19,9 @@
       <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Common/f:EncryptionProvider.cs" caret="915" fromTop="19" />
       <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Handlers/f:CharacterCreateHandler.cs" caret="0" fromTop="0" />
       <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Common/f:IMessageHandler.cs" caret="0" fromTop="0" />
-      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_GUI/f:CharacterSelectGUI.cs" caret="1107" fromTop="35" />
       <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Common/f:ConnectionHandler.cs" caret="2081" fromTop="26" />
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_GUI/f:CharacterSelectGUI.cs" caret="550" fromTop="23" />
+      <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_GUI/f:CharacterCreateGUI.cs" caret="1651" fromTop="28" />
     </RecentFiles>
     <RecentEdits>
       <File id="9CFFD7F9-5DE6-C2CC-68C8-FAE6DF4CD638/d:Assets/d:_Scripts/d:_Common/f:ConnectionHandler.cs" caret="513" fromTop="16" />

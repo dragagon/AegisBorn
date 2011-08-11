@@ -12,6 +12,13 @@
  * @property integer $level
  * @property integer $position_x
  * @property integer $position_y
+ * @property integer $position_z
+ * @property integer $str
+ * @property integer $agi
+ * @property integer $vit
+ * @property integer $_int
+ * @property integer $dex
+ * @property integer $luk
  * @property sfGuardUser $sfGuardUser
  * 
  * @method integer            getUserId()      Returns the current record's "user_id" value
@@ -21,6 +28,13 @@
  * @method integer            getLevel()       Returns the current record's "level" value
  * @method integer            getPositionX()   Returns the current record's "position_x" value
  * @method integer            getPositionY()   Returns the current record's "position_y" value
+ * @method integer            getPositionZ()   Returns the current record's "position_z" value
+ * @method integer            getStr()         Returns the current record's "str" value
+ * @method integer            getAgi()         Returns the current record's "agi" value
+ * @method integer            getVit()         Returns the current record's "vit" value
+ * @method integer            get_int()        Returns the current record's "_int" value
+ * @method integer            getDex()         Returns the current record's "dex" value
+ * @method integer            getLuk()         Returns the current record's "luk" value
  * @method sfGuardUser        getSfGuardUser() Returns the current record's "sfGuardUser" value
  * @method AegisBornCharacter setUserId()      Sets the current record's "user_id" value
  * @method AegisBornCharacter setName()        Sets the current record's "name" value
@@ -29,6 +43,13 @@
  * @method AegisBornCharacter setLevel()       Sets the current record's "level" value
  * @method AegisBornCharacter setPositionX()   Sets the current record's "position_x" value
  * @method AegisBornCharacter setPositionY()   Sets the current record's "position_y" value
+ * @method AegisBornCharacter setPositionZ()   Sets the current record's "position_z" value
+ * @method AegisBornCharacter setStr()         Sets the current record's "str" value
+ * @method AegisBornCharacter setAgi()         Sets the current record's "agi" value
+ * @method AegisBornCharacter setVit()         Sets the current record's "vit" value
+ * @method AegisBornCharacter set_int()        Sets the current record's "_int" value
+ * @method AegisBornCharacter setDex()         Sets the current record's "dex" value
+ * @method AegisBornCharacter setLuk()         Sets the current record's "luk" value
  * @method AegisBornCharacter setSfGuardUser() Sets the current record's "sfGuardUser" value
  * 
  * @package    AegisBorn
@@ -69,6 +90,34 @@ abstract class BaseAegisBornCharacter extends sfDoctrineRecord
         $this->hasColumn('position_y', 'integer', null, array(
              'type' => 'integer',
              'default' => 0,
+             ));
+        $this->hasColumn('position_z', 'integer', null, array(
+             'type' => 'integer',
+             'default' => 0,
+             ));
+        $this->hasColumn('str', 'integer', null, array(
+             'type' => 'integer',
+             'default' => 1,
+             ));
+        $this->hasColumn('agi', 'integer', null, array(
+             'type' => 'integer',
+             'default' => 1,
+             ));
+        $this->hasColumn('vit', 'integer', null, array(
+             'type' => 'integer',
+             'default' => 1,
+             ));
+        $this->hasColumn('_int', 'integer', null, array(
+             'type' => 'integer',
+             'default' => 1,
+             ));
+        $this->hasColumn('dex', 'integer', null, array(
+             'type' => 'integer',
+             'default' => 1,
+             ));
+        $this->hasColumn('luk', 'integer', null, array(
+             'type' => 'integer',
+             'default' => 1,
              ));
     }
 

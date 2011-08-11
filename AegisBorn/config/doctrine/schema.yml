@@ -24,12 +24,7 @@ AegisBornCharacter:
     position_x: {type: integer, default: 0 }
     position_y: {type: integer, default: 0 }
     position_z: {type: integer, default: 0 }
-    str:        {type: integer, default: 1 }
-    agi:        {type: integer, default: 1 }
-    vit:        {type: integer, default: 1 }
-    _int:        {type: integer, default: 1 }
-    dex:        {type: integer, default: 1 }
-    luk:        {type: integer, default: 1 }
+    base_stats: {type: string }
   relations:
     sfGuardUser:
       type:           one
